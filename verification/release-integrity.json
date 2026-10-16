@@ -1,0 +1,26 @@
+[
+  {
+    "apk": "Arcaea-6.13.10c-Practice-External-r3.apk",
+    "sha256": "96fff1c3871a7e32fe54b38fb6b9d5f94bf28e1bd97d90414a2e5af4c691b214",
+    "bytes": 27928389,
+    "preserved_entries": 487,
+    "signature": "v2/v3 verified",
+    "alignment": "16KB verified",
+    "native_game_unchanged": true,
+    "game_native_sha256": "a2633fe805b55627f0143ca7f7f08555cc80b6cff13b4e0ddfa294bbe64df6ed",
+    "zip_crc": "all entries passed",
+    "variant": "shell"
+  },
+  {
+    "apk": "Arcaea-Practice-Enhanced-7.0.1f-r10.apk",
+    "sha256": "ff1816a5bfe21e415e9fe5007c91ecc746c3ff0b4f1ef53a5b1fdcbe3c8b7f66",
+    "bytes": 3711117553,
+    "preserved_entries": 9468,
+    "signature": "v2/v3 verified",
+    "alignment": "16KB verified",
+    "native_game_unchanged": true,
+    "game_native_sha256": "143e1c8bd6683a93ac02f895f500b3ff2a1143a528f1dab56788fa655d3cbb23",
+    "zip_crc": "all entries passed",
+    "variant": "full"
+  }
+]

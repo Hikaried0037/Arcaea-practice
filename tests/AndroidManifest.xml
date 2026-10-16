@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="moe.practice.regression"><uses-sdk android:minSdkVersion="24" android:targetSdkVersion="28"/><application android:label="Practice regression"/><instrumentation android:name="moe.practice.LibraryTestRunner" android:targetPackage="moe.low.Arc61310.practice"/></manifest>

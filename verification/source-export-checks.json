@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-16",
+  "native_java_bytes_match": 29,
+  "full_plugin_compile": "passed",
+  "shell_plugin_compile": "passed",
+  "shell_unsigned_repack": "passed",
+  "shell_preserved_entries": 487,
+  "shell_zip_crc": "all entries passed",
+  "shell_alignment": "16KB verified",
+  "privacy_scanner_regression_checks": 10,
+  "production_apks_modified": false
+}
