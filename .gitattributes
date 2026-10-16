@@ -1,0 +1,2 @@
+# Preserve verified source bytes and SOURCE_SHA256.json on every platform.
+* -text
