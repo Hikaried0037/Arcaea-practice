@@ -27,14 +27,14 @@ static int (*assetAllocatedOriginal)(AAsset*);
 static int (*streamOpenOriginal)(void*,const char*,unsigned,void*,void**);
 static int (*soundOpenOriginal)(void*,const char*,unsigned,void*,void**);
 static std::string localAudioPath(const char* name,unsigned mode){
- if(!name||(mode&0x10000800u))return "";std::string n=name;
+ if(!name||(mode&0x10000c00u))return "";std::string n=name;
  const std::string prefix="file:///android_asset/";if(n.rfind(prefix,0)==0)n=n.substr(prefix.size());
  if(n.rfind("assets/",0)==0)n=n.substr(7);
  if(n.rfind("songs/",0)!=0||n.find("..")!=std::string::npos)return "";
  std::string p=assetRoot+"/"+n;return access(p.c_str(),R_OK)==0?p:"";
 }
-static int streamOpen(void* system,const char* name,unsigned mode,void* info,void** sound){std::string p=localAudioPath(name,mode);return streamOpenOriginal(system,p.empty()?name:p.c_str(),mode,info,sound);}
-static int soundOpen(void* system,const char* name,unsigned mode,void* info,void** sound){std::string p=localAudioPath(name,mode);return soundOpenOriginal(system,p.empty()?name:p.c_str(),mode,info,sound);}
+static int streamOpen(void* system,const char* name,unsigned mode,void* info,void** sound){std::string p=localAudioPath(name,mode);int result=streamOpenOriginal(system,p.empty()?name:p.c_str(),mode,info,sound);if(!result&&sound)qualityRegisterSound(system,p.empty()?name:p.c_str(),mode,*sound);return result;}
+static int soundOpen(void* system,const char* name,unsigned mode,void* info,void** sound){std::string p=localAudioPath(name,mode);int result=soundOpenOriginal(system,p.empty()?name:p.c_str(),mode,info,sound);if(!result&&sound)qualityRegisterSound(system,p.empty()?name:p.c_str(),mode,*sound);return result;}
 static AAsset* assetOpen(AAssetManager* m,const char* name,int mode){
  std::string n=name?name:"";if(n.rfind("assets/",0)==0)n=n.substr(7);
  std::lock_guard<std::mutex> lock(assetMutex);
@@ -73,7 +73,7 @@ static int assetFd(AAsset* a,off_t* s,off_t* n){std::lock_guard<std::mutex> l(as
 static int assetFd64(AAsset* a,off64_t* s,off64_t* n){std::lock_guard<std::mutex> l(assetMutex);auto it=localAssets.find(a);if(it==localAssets.end())return assetFd64Original(a,s,n);*s=0;*n=it->second->bytes.size();return open(it->second->path.c_str(),O_RDONLY|O_CLOEXEC);}
 struct AssetHook{const char* name;void* replacement;void** original;};
 #define AH(F,N) {N,reinterpret_cast<void*>(F),reinterpret_cast<void**>(&F##Original)}
-static AssetHook assetHooks[]={AH(assetOpen,"AAssetManager_open"),AH(assetRead,"AAsset_read"),AH(assetClose,"AAsset_close"),AH(assetSeek,"AAsset_seek"),AH(assetSeek64,"AAsset_seek64"),AH(assetLength,"AAsset_getLength"),AH(assetLength64,"AAsset_getLength64"),AH(assetRemaining,"AAsset_getRemainingLength"),AH(assetRemaining64,"AAsset_getRemainingLength64"),AH(assetBuffer,"AAsset_getBuffer"),AH(assetFd,"AAsset_openFileDescriptor"),AH(assetFd64,"AAsset_openFileDescriptor64"),AH(assetAllocated,"AAsset_isAllocated"),AH(streamOpen,"_ZN4FMOD6System12createStreamEPKcjP22FMOD_CREATESOUNDEXINFOPPNS_5SoundE"),AH(soundOpen,"_ZN4FMOD6System11createSoundEPKcjP22FMOD_CREATESOUNDEXINFOPPNS_5SoundE")};
+static AssetHook assetHooks[]={AH(assetOpen,"AAssetManager_open"),AH(assetRead,"AAsset_read"),AH(assetClose,"AAsset_close"),AH(assetSeek,"AAsset_seek"),AH(assetSeek64,"AAsset_seek64"),AH(assetLength,"AAsset_getLength"),AH(assetLength64,"AAsset_getLength64"),AH(assetRemaining,"AAsset_getRemainingLength"),AH(assetRemaining64,"AAsset_getRemainingLength64"),AH(assetBuffer,"AAsset_getBuffer"),AH(assetFd,"AAsset_openFileDescriptor"),AH(assetFd64,"AAsset_openFileDescriptor64"),AH(assetAllocated,"AAsset_isAllocated"),AH(qualityPlay,"_ZN4FMOD6System9playSoundEPNS_5SoundEPNS_12ChannelGroupEbPPNS_7ChannelE"),AH(qualityPosition,"_ZN4FMOD7Channel11getPositionEPjj"),AH(qualitySeek,"_ZN4FMOD7Channel11setPositionEjj"),AH(qualityLength,"_ZN4FMOD5Sound9getLengthEPjj"),AH(qualityRelease,"_ZN4FMOD5Sound7releaseEv"),AH(qualityStop,"_ZN4FMOD14ChannelControl4stopEv"),AH(streamOpen,"_ZN4FMOD6System12createStreamEPKcjP22FMOD_CREATESOUNDEXINFOPPNS_5SoundE"),AH(soundOpen,"_ZN4FMOD6System11createSoundEPKcjP22FMOD_CREATESOUNDEXINFOPPNS_5SoundE")};
 static int hookAssetLibrary(dl_phdr_info* info,size_t,void*){
  if(!strstr(info->dlpi_name,"libcocos2dcpp.so")&&!strstr(info->dlpi_name,"libfmod")&&!strstr(info->dlpi_name,"libarcinf.so"))return 0;
  ElfW(Dyn)* dyn=nullptr;for(int i=0;i<info->dlpi_phnum;i++)if(info->dlpi_phdr[i].p_type==PT_DYNAMIC)dyn=reinterpret_cast<ElfW(Dyn)*>(info->dlpi_addr+info->dlpi_phdr[i].p_vaddr);

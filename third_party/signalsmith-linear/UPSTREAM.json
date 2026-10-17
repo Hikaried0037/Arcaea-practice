@@ -1,0 +1,18 @@
+{
+  "name": "signalsmith-linear",
+  "repository": "https://github.com/Signalsmith-Audio/linear",
+  "commit": "146b26f91b48835d665fa0498d64d9617818d27a",
+  "license": "MIT",
+  "files": {
+    "approx.h": "bf6f703193253a241e7a80d44547bb73c383a9a1f1ebe1f7fefdcf3d234515bd",
+    "fft.h": "fb55f69ac14cdbac66b9c76053069ff63bc36d18af20d8c028b9acc0aad6516a",
+    "linear.h": "7cfd0f9e91ee1bb1f1a582824b404fffdc2c041fc1e3db67341d2ebb1035740f",
+    "stft.h": "7422ff5ddc2a017dc0587dcce99ce5ba30a2414bc2996081f6b00d56905d9b8c",
+    "LICENSE.txt": "072b5e9eb5b22880bdf6256324654cf3ce53dba828edb911921121e1be09d9c3",
+    "README.md": "4cdc3a2a10f6beb5b3c6ca63d27e0daadaba488fe6e13b73045e755ba190ed43",
+    "include/signalsmith-linear/approx.h": "55c090c621657ee1fbe23a8c582811e103acf8ba10263c4a6d9b66a62809fa1a",
+    "include/signalsmith-linear/fft.h": "98e7e64093b6fc8ccbba31f710370d5548243bad35beb489e8282de4dc25d76d",
+    "include/signalsmith-linear/linear.h": "5c5d55810af0b7f8c8fe27ef1a36a87a4529f95cbebbb5e49f39845f6a2a0d5e",
+    "include/signalsmith-linear/stft.h": "a323656e5ed80b271262106ea782d6150ef2f1c8b2f3c5896552b90b2ad6c17e"
+  }
+}

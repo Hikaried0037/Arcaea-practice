@@ -1,0 +1,107 @@
+{
+  "result": "passed",
+  "method": "Unicorn execution of final compiled clockHook and original game clock, 144 Hz updates with quantised FMOD position",
+  "variants": {
+    "full": [
+      {
+        "rate": 0.5,
+        "phase": "lead_complete",
+        "queries": 87,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 4
+      },
+      {
+        "rate": 0.5,
+        "phase": "resume",
+        "queries": 86,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 4
+      },
+      {
+        "rate": 1.0,
+        "phase": "lead_complete",
+        "queries": 87,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 7
+      },
+      {
+        "rate": 1.0,
+        "phase": "resume",
+        "queries": 86,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 7
+      },
+      {
+        "rate": 2.0,
+        "phase": "lead_complete",
+        "queries": 87,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 14
+      },
+      {
+        "rate": 2.0,
+        "phase": "resume",
+        "queries": 86,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 14
+      }
+    ],
+    "shell": [
+      {
+        "rate": 0.5,
+        "phase": "lead_complete",
+        "queries": 87,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 4
+      },
+      {
+        "rate": 0.5,
+        "phase": "resume",
+        "queries": 86,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 4
+      },
+      {
+        "rate": 1.0,
+        "phase": "lead_complete",
+        "queries": 87,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 7
+      },
+      {
+        "rate": 1.0,
+        "phase": "resume",
+        "queries": 86,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 7
+      },
+      {
+        "rate": 2.0,
+        "phase": "lead_complete",
+        "queries": 87,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 14
+      },
+      {
+        "rate": 2.0,
+        "phase": "resume",
+        "queries": 86,
+        "repeated_chart_frames": 0,
+        "backward_chart_frames": 0,
+        "max_chart_step_ms": 14
+      }
+    ]
+  },
+  "limitations": "No physical GPU/144 Hz device frame-time measurement"
+}

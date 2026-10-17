@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-17",
+  "environment": "Android 35 x86_64 Google APIs emulator with ARM64 translation",
+  "variants": {
+    "shell": {
+      "installed_final_signed_apk": true,
+      "segment_start_ms": 30000,
+      "speed": 2.0,
+      "lead_elapsed_ms": 3000,
+      "sync_completions_after_lead_and_resume": [
+        {
+          "chart_ms": 36093,
+          "samples": 72
+        },
+        {
+          "chart_ms": 115364,
+          "samples": 72
+        }
+      ],
+      "pause_resume_checked": true
+    },
+    "full": {
+      "installed_final_signed_apk": true,
+      "segment_start_ms": 30000,
+      "speed": 0.5,
+      "lead_elapsed_ms": 3006,
+      "sync_completions_after_lead_and_resume": [
+        {
+          "chart_ms": 31524,
+          "samples": 76
+        },
+        {
+          "chart_ms": 78696,
+          "samples": 72
+        }
+      ],
+      "pause_resume_checked": true
+    }
+  },
+  "unchanged_audio_and_lead_and_java_source_files": 23,
+  "limitations": [
+    "No physical 144 Hz GPU/frame-time measurement",
+    "Headless emulator has no physical headphone latency or listening assessment"
+  ],
+  "emulator_log_timezone": "UTC"
+}

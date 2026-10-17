@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-17",
+  "environment": "Android 35 Google APIs x86_64 emulator with ARM64 translation",
+  "installed_final_signed_apks": true,
+  "algorithm": "Signalsmith Stretch 1.3.2 with two-stage extreme slowdown; SoundTouch 2.4.1 for changing pitch",
+  "shell": {
+    "song": "Sayonara Hatsukoi",
+    "verified_rates": [
+      2.0,
+      0.5
+    ],
+    "actual_fmod_pitch": 1.0,
+    "cache_sample_rate": 44100,
+    "converted_frames": {
+      "2.00": 2536027,
+      "0.50": 10144108
+    }
+  },
+  "full": {
+    "song": "Gimme Caramel Popcorn!",
+    "verified_rates": [
+      0.5,
+      2.0
+    ],
+    "actual_fmod_pitch": 1.0,
+    "cache_sample_rate": 44100,
+    "converted_frames": {
+      "0.50": 12783584,
+      "2.00": 3195896
+    },
+    "source_time_sync_ms": {
+      "0.50": 3015,
+      "2.00": 3082
+    }
+  },
+  "prior_candidate_tests": [
+    "nonzero segment A=30/B=60, absolute ~3 second lead-in at 0.5x and 2x",
+    "optional changing-pitch mode at 0.5x"
+  ],
+  "limitations": [
+    "Headless emulator: no physical headphone/listening assessment",
+    "Prior candidate playback tests validate shared FMOD routing, not final spectral algorithm",
+    "Synthetic measurements cannot guarantee perceptual equivalence for every song"
+  ]
+}

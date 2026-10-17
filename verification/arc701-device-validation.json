@@ -1,0 +1,50 @@
+{
+  "environment": "Android 35 x86_64 virtual device with ARM64 translation, 1920x1080",
+  "package": "moe.low.Arc701.practice",
+  "resource_root": "/storage/emulated/0/Arc701/",
+  "hooks_ready": true,
+  "playback": {
+    "slow": {
+      "rate": 0.5,
+      "pitch_changes": true,
+      "decoded_source_frames": 6409200,
+      "output_frames": 12818400
+    },
+    "fast": {
+      "rate": 1.5,
+      "pitch_preserved": true,
+      "fixed_flow": true,
+      "decoded_source_frames": 6409200,
+      "output_frames": 4272800
+    }
+  },
+  "timeline": {
+    "waveform_loaded": true,
+    "backward_scrub_seconds": [
+      125,
+      20.775
+    ],
+    "score_during_preview": 8000488,
+    "score_unchanged": true,
+    "no_scene_reload_during_scrub": true,
+    "segment_start_ms": 20775,
+    "observed_lead_wall_ms": 3019
+  },
+  "library": {
+    "created_pack": "Arc701-Test",
+    "native_cover_loaded": true,
+    "zip_import": "Bismuth",
+    "native_pack_entry_visible": true,
+    "native_beyond_song_selection": true,
+    "artist_displayed": "Ludicin",
+    "jacket_and_preview_visible": true,
+    "difficulty": 3,
+    "missing_chartDesigner_not_invented": true
+  },
+  "limits": [
+    "No original Arc701 resource packet supplied; existing local 7.0.1f resources used for virtual-device testing.",
+    "No physical device audio latency or 144 Hz GPU measurement.",
+    "Not exhaustive Camera/SceneControl or 6K replay testing.",
+    "Playback figures recorded from preceding runtime tool output; current-session import log and screenshots supplied."
+  ]
+}

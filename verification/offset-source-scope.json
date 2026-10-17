@@ -1,0 +1,12 @@
+{
+  "changed_production_sources": [
+    "variants/full/native/practice.cpp",
+    "variants/full/native/transport.h",
+    "variants/shell/native/practice.cpp",
+    "variants/shell/native/transport.h"
+  ],
+  "all_java_sources_unchanged": true,
+  "shared_transport_headers_identical": true,
+  "applies_to": "shell r4 / full r11",
+  "historical": true
+}

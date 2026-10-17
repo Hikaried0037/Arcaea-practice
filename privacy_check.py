@@ -1,5 +1,5 @@
 """Scan a source export or Git index without printing matched private values."""
-import argparse,json,re,subprocess
+import argparse,json,re,subprocess,hashlib
 from pathlib import Path
 
 RULES={
@@ -14,6 +14,16 @@ BLOCKED={'.apk','.aab','.zip','.p12','.pfx','.jks','.keystore','.key','.pem','.s
 
 def scan(root,paths=None,secrets=()):
  root=root.resolve();findings=[];count=0
+ # Public upstream author/license contacts are attribution, not user data.
+ # The exemption applies only to exact pristine files in the pinned manifest;
+ # private paths, credentials and known-secret checks still apply to them.
+ allowed_attribution=set()
+ for name in ['soundtouch','signalsmith-stretch','signalsmith-linear']:
+  vendor=root/'third_party'/name;manifest=vendor/'UPSTREAM.json'
+  if manifest.is_file():
+   for relative,digest in json.loads(manifest.read_text(encoding='utf-8'))['files'].items():
+    p=vendor/relative
+    if p.is_file() and p.resolve().is_relative_to(vendor.resolve()) and hashlib.sha256(p.read_bytes()).hexdigest()==digest:allowed_attribution.add(p.resolve())
  if paths is None:
   paths=[p for p in root.rglob('*') if p.is_file() and not any(x in {'.git','out','__pycache__'} for x in p.relative_to(root).parts)]
  for path in paths:
@@ -25,7 +35,7 @@ def scan(root,paths=None,secrets=()):
   except UnicodeDecodeError:findings.append({'file':relative,'rule':'non_text_content'});continue
   for label,pattern in RULES.items():
    if pattern.search(text):findings.append({'file':relative,'rule':label})
-  if any(not m.group().endswith('@users.noreply.github.com') and not m.group().endswith('@example.com') for m in EMAIL.finditer(text)):
+  if path.resolve() not in allowed_attribution and any(not m.group().endswith('@users.noreply.github.com') and not m.group().endswith('@example.com') for m in EMAIL.finditer(text)):
    findings.append({'file':relative,'rule':'personal_email'})
   if any(secret and secret in data for secret in secrets):findings.append({'file':relative,'rule':'known_secret'})
  return {'files_checked':count,'passed':not findings,'findings':findings,'matched_values_included':False}

@@ -1,0 +1,38 @@
+{
+  "result": "passed",
+  "platform": "Android 35 x86_64 virtual devices with ARM64 translation",
+  "variants": {
+    "shell": {
+      "installed_plugin_sha256": "4ebc45272b181d3244aeeecc02ebe16a589187de029519901d39b73d82faecd5",
+      "matches_final_build": true,
+      "formal_apk_installed": true,
+      "private_probe_absent": true,
+      "original_ogg_source_frames": 5089462,
+      "expected_ogg_source_frames": 5089462,
+      "processed_frames_at_0_50": 10178924,
+      "sample_rate": 44100,
+      "formal_0_50_playback": true
+    },
+    "full": {
+      "installed_plugin_sha256": "eaf859ae74877db792beaf0999c28e4d006449d560cdbcbbae4ce4f3b369a871",
+      "matches_final_build": true,
+      "formal_apk_installed": true,
+      "private_probe_absent": true,
+      "original_ogg_source_frames": 6409200,
+      "expected_ogg_source_frames": 6409200,
+      "processed_frames_at_0_50": 12818400,
+      "sample_rate": 44100,
+      "formal_0_50_playback": true
+    }
+  },
+  "decoder_note": "Full original-song source frame count was logged during decoder-only candidate; final full build reused identical v4 cache. Final shell build freshly decoded original OGG after fixture restoration.",
+  "fixture_restored": {
+    "music_sha256": "4076783b04709ed35fc002a3b025c092c05994b23edc32852a1b794af57842f3",
+    "aff_sha256": "da15230813dea726ac5261eeda27e0e34e80a9dffc61c944cc52a3ccb5ac9e19",
+    "matched_pretest_backups": true
+  },
+  "limitations": [
+    "Actual mixed-PCM source-event timing tested through private shell probe; production APKs contain no probe.",
+    "No physical headphone output or physical 144 Hz GPU timing test."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "method": "Unicorn ARM64 instruction execution; not device audio playback",
+  "production_helper_cases": 3520,
+  "absolute_preroll_cases": 18,
+  "original_native_clock_cases": {
+    "full": 160,
+    "shell": 160
+  },
+  "result": "passed",
+  "limitations": "FMOD start and wall clock mocked; no physical audio latency or device graphics tested"
+}

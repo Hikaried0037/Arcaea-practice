@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-17",
+  "environment": "Android 35 Google APIs x86_64 emulator, ARM64 translation, final signed APKs installed",
+  "result": "passed",
+  "variants": {
+    "full": [
+      {
+        "variant": "full",
+        "route": 0,
+        "unscaled_setting": -120,
+        "clock_ready": true,
+        "rate": 0.5,
+        "source_device_offset": -120,
+        "aff_offset": 0,
+        "clock_combined": -60,
+        "music_origin": 60
+      },
+      {
+        "variant": "full",
+        "route": 0,
+        "unscaled_setting": -80,
+        "clock_ready": true,
+        "rate": 0.5,
+        "source_device_offset": -80,
+        "aff_offset": 0,
+        "clock_combined": -40,
+        "music_origin": 40
+      },
+      {
+        "variant": "full",
+        "route": 0,
+        "unscaled_setting": -80,
+        "clock_ready": true,
+        "rate": 0.5,
+        "source_device_offset": -80,
+        "aff_offset": 0,
+        "clock_combined": -40,
+        "music_origin": 40
+      },
+      {
+        "variant": "full",
+        "route": 0,
+        "unscaled_setting": 0,
+        "clock_ready": true,
+        "rate": 0.5,
+        "source_device_offset": 0,
+        "aff_offset": 0,
+        "clock_combined": 0,
+        "music_origin": 0
+      }
+    ],
+    "shell": [
+      {
+        "variant": "shell",
+        "route": 0,
+        "unscaled_setting": 160,
+        "clock_ready": true,
+        "rate": 0.5,
+        "source_device_offset": 160,
+        "aff_offset": 0,
+        "clock_combined": 80,
+        "music_origin": -80
+      },
+      {
+        "variant": "shell",
+        "route": 0,
+        "unscaled_setting": 160,
+        "clock_ready": true,
+        "rate": 1.5,
+        "source_device_offset": 160,
+        "aff_offset": 0,
+        "clock_combined": 240,
+        "music_origin": -240
+      },
+      {
+        "variant": "shell",
+        "route": 0,
+        "unscaled_setting": -160,
+        "clock_ready": true,
+        "rate": 1.5,
+        "source_device_offset": -160,
+        "aff_offset": 0,
+        "clock_combined": -240,
+        "music_origin": 240
+      },
+      {
+        "variant": "shell",
+        "route": 0,
+        "unscaled_setting": -160,
+        "clock_ready": true,
+        "rate": 1.5,
+        "source_device_offset": -160,
+        "aff_offset": 0,
+        "clock_combined": -240,
+        "music_origin": 240
+      },
+      {
+        "variant": "shell",
+        "route": 0,
+        "unscaled_setting": 0,
+        "clock_ready": true,
+        "rate": 1.5,
+        "source_device_offset": 0,
+        "aff_offset": 0,
+        "clock_combined": 0,
+        "music_origin": 0
+      }
+    ]
+  },
+  "method": "Use in-memory test settings in this task isolated emulators; read back unscaled active settings, plugin baseline and native clock fields. Test slow speed, speed change and live positive/negative settings edit; restore original settings.",
+  "limitations": [
+    "No physical audio output latency or listening assessment",
+    "Test edits target process settings memory, not persistence through the native settings UI"
+  ]
+}

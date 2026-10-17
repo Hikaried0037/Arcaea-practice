@@ -1,0 +1,13 @@
+{
+  "result": "passed",
+  "sample_rate": 48000,
+  "channels": 2,
+  "rate": 0.5,
+  "expected_frames": 4032000,
+  "actual_frames": 4032000,
+  "first_source_pulse_seconds": 5,
+  "first_cached_pulse_seconds": 10.029375,
+  "onset_error_ms": 29.37499999999993,
+  "method": "Actual FMOD-produced cache from generated 42-second fixture; whole PCM duration and first audible pulse",
+  "limitations": "Pulse transient shape can change under pitch-preserving processing"
+}

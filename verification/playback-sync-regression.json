@@ -1,0 +1,1 @@
+{"passed":true,"cases":150,"fps":[60,90,120,144,165,240],"quantized_audio_ms":23,"at_144hz":{"old_repeated_time_frames":302,"new_repeated_time_frames":0,"audio_queries_in_3s":87},"limitations":"Synthetic transport test, not physical GPU FPS measurement"}

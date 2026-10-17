@@ -1,0 +1,12 @@
+{
+  "name": "signalsmith-stretch",
+  "repository": "https://github.com/Signalsmith-Audio/signalsmith-stretch",
+  "commit": "a670068d9aeb64913331d5cc29337b19a457a7df",
+  "license": "MIT",
+  "files": {
+    "signalsmith-stretch.h": "1188667959ac19dd40c0a6abbce694e44705615ec4f0e8db8af0f1cfb4c5dea7",
+    "LICENSE.txt": "ee2ef82481ffb445ecdd4b3a4c1f82c0cddb2da8fe39d8e8dc384fffb3e7f06f",
+    "README.md": "d2c43d92312154a09660bffbb06b408f3b470662f89cb4123fa5268a4ced444c",
+    "include/signalsmith-stretch/signalsmith-stretch.h": "869facc1853189bec91fb54960da2f59333284963d6b52a242d55a399d305e4d"
+  }
+}

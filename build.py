@@ -14,6 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 PROFILES = {
+    'arc701': ('classes3.dex', 'fa7ab65059ae2639a54b2daf37c0cd2d2084f620c2c322e8252f740e713fc6a1'),
     'shell': ('classes3.dex', 'a2633fe805b55627f0143ca7f7f08555cc80b6cff13b4e0ddfa294bbe64df6ed'),
     'full': ('classes4.dex', '143e1c8bd6683a93ac02f895f500b3ff2a1143a528f1dab56788fa655d3cbb23'),
 }
@@ -74,7 +75,11 @@ def main():
     classes.mkdir(parents=True)
     dexdir.mkdir(exist_ok=True)
     run(clang, '--target=aarch64-linux-android24', '-shared', '-fPIC', '-O2', '-std=c++17', '-static-libstdc++',
-        '-Wl,-z,max-page-size=16384', project/'native/practice.cpp', '-llog', '-ldl', '-o', build/'libarcpractice.so')
+        '-Wl,-z,max-page-size=16384', '-DANDROID', '-DSOUNDTOUCH_DISABLE_X86_OPTIMIZATIONS',
+        '-I'+str(ROOT/'third_party/signalsmith-stretch'), '-I'+str(ROOT/'third_party/signalsmith-linear/include'),
+        '-I'+str(ROOT/'third_party/soundtouch/include'), '-I'+str(ROOT/'third_party/soundtouch/source/SoundTouch'),
+        project/'native/practice.cpp', *sorted((ROOT/'third_party/soundtouch/source/SoundTouch').glob('*.cpp')),
+        '-llog', '-ldl', '-o', build/'libarcpractice.so')
     run(javac, '-encoding', 'UTF-8', '-source', '8', '-target', '8', '-classpath', android, '-d', classes,
         *sorted((project/'java/moe/practice').glob('*.java')))
     run(java, '-cp', bt/'lib/d8.jar', 'com.android.tools.r8.D8', '--min-api', '24', '--lib', android,

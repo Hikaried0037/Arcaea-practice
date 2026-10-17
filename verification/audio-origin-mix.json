@@ -1,0 +1,577 @@
+{
+  "method": "Actual FMOD 24000 Hz stereo master mix on Android emulator; generated music in left channel, reference click triggered at real tap judgement in right channel; correlate actual cached waveform anchored to original source marker.",
+  "settings_offset": 0,
+  "aff_offset": 0,
+  "changes_pitch": false,
+  "measurements": {
+    "original_1.00": {
+      "rate": 1.0,
+      "sample_rate": 24000,
+      "captured_seconds": 107.53066666666666,
+      "beats": [
+        {
+          "music_onset_s": 11.256,
+          "effect_onset_s": 11.288,
+          "effect_minus_music_ms": 32.0
+        },
+        {
+          "music_onset_s": 13.256,
+          "effect_onset_s": 13.282667,
+          "effect_minus_music_ms": 26.6667
+        },
+        {
+          "music_onset_s": 15.256,
+          "effect_onset_s": 15.277333,
+          "effect_minus_music_ms": 21.3333
+        },
+        {
+          "music_onset_s": 17.256,
+          "effect_onset_s": 17.272,
+          "effect_minus_music_ms": 16.0
+        },
+        {
+          "music_onset_s": 19.256,
+          "effect_onset_s": 19.266667,
+          "effect_minus_music_ms": 10.6667
+        },
+        {
+          "music_onset_s": 21.256,
+          "effect_onset_s": 21.261333,
+          "effect_minus_music_ms": 5.3333
+        },
+        {
+          "music_onset_s": 23.256,
+          "effect_onset_s": 23.256,
+          "effect_minus_music_ms": 0.0
+        },
+        {
+          "music_onset_s": 25.256,
+          "effect_onset_s": 25.296,
+          "effect_minus_music_ms": 40.0
+        },
+        {
+          "music_onset_s": 27.256,
+          "effect_onset_s": 27.290667,
+          "effect_minus_music_ms": 34.6667
+        },
+        {
+          "music_onset_s": 29.256,
+          "effect_onset_s": 29.285333,
+          "effect_minus_music_ms": 29.3333
+        },
+        {
+          "music_onset_s": 31.256,
+          "effect_onset_s": 31.28,
+          "effect_minus_music_ms": 24.0
+        },
+        {
+          "music_onset_s": 33.256,
+          "effect_onset_s": 33.274667,
+          "effect_minus_music_ms": 18.6667
+        },
+        {
+          "music_onset_s": 35.256,
+          "effect_onset_s": 35.269333,
+          "effect_minus_music_ms": 13.3333
+        },
+        {
+          "music_onset_s": 37.256,
+          "effect_onset_s": 37.264,
+          "effect_minus_music_ms": 8.0
+        },
+        {
+          "music_onset_s": 39.256,
+          "effect_onset_s": 39.258667,
+          "effect_minus_music_ms": 2.6667
+        },
+        {
+          "music_onset_s": 41.256,
+          "effect_onset_s": 41.253333,
+          "effect_minus_music_ms": -2.6667
+        },
+        {
+          "music_onset_s": 43.256,
+          "effect_onset_s": 43.293333,
+          "effect_minus_music_ms": 37.3333
+        }
+      ],
+      "median_delta_ms": 18.6667,
+      "max_abs_delta_ms": 40.0
+    },
+    "old_0.50": {
+      "rate": 0.5,
+      "music_carrier_hz": null,
+      "sample_rate": 24000,
+      "captured_seconds": 67.456,
+      "beats": [
+        {
+          "music_source_marker_s": 15.002667,
+          "judgement_reference_marker_s": 15.821333,
+          "reference_minus_music_ms": 818.6667
+        },
+        {
+          "music_source_marker_s": 19.002667,
+          "judgement_reference_marker_s": 19.810667,
+          "reference_minus_music_ms": 808.0
+        },
+        {
+          "music_source_marker_s": 23.00275,
+          "judgement_reference_marker_s": 23.845333,
+          "reference_minus_music_ms": 842.5833
+        },
+        {
+          "music_source_marker_s": 27.002708,
+          "judgement_reference_marker_s": 27.789333,
+          "reference_minus_music_ms": 786.625
+        },
+        {
+          "music_source_marker_s": 31.002792,
+          "judgement_reference_marker_s": 31.824,
+          "reference_minus_music_ms": 821.2083
+        },
+        {
+          "music_source_marker_s": 35.00275,
+          "judgement_reference_marker_s": 35.813333,
+          "reference_minus_music_ms": 810.5833
+        },
+        {
+          "music_source_marker_s": 39.002625,
+          "judgement_reference_marker_s": 39.802667,
+          "reference_minus_music_ms": 800.0417
+        },
+        {
+          "music_source_marker_s": 43.00275,
+          "judgement_reference_marker_s": 43.792,
+          "reference_minus_music_ms": 789.25
+        },
+        {
+          "music_source_marker_s": 47.002708,
+          "judgement_reference_marker_s": 47.826667,
+          "reference_minus_music_ms": 823.9583
+        },
+        {
+          "music_source_marker_s": 51.00275,
+          "judgement_reference_marker_s": 51.816,
+          "reference_minus_music_ms": 813.25
+        },
+        {
+          "music_source_marker_s": 55.002792,
+          "judgement_reference_marker_s": 55.805333,
+          "reference_minus_music_ms": 802.5417
+        },
+        {
+          "music_source_marker_s": 59.002625,
+          "judgement_reference_marker_s": 59.794667,
+          "reference_minus_music_ms": 792.0417
+        },
+        {
+          "music_source_marker_s": 63.002708,
+          "judgement_reference_marker_s": 63.829333,
+          "reference_minus_music_ms": 826.625
+        }
+      ],
+      "median_delta_ms": 810.5833,
+      "max_abs_delta_ms": 842.5833
+    },
+    "decoder_fixed_0.50": {
+      "rate": 0.5,
+      "music_carrier_hz": null,
+      "sample_rate": 24000,
+      "captured_seconds": 272.068,
+      "beats": [
+        {
+          "music_source_marker_s": 15.009333,
+          "judgement_reference_marker_s": 15.028,
+          "reference_minus_music_ms": 18.6667
+        },
+        {
+          "music_source_marker_s": 19.00925,
+          "judgement_reference_marker_s": 19.017333,
+          "reference_minus_music_ms": 8.0833
+        },
+        {
+          "music_source_marker_s": 23.009333,
+          "judgement_reference_marker_s": 23.006667,
+          "reference_minus_music_ms": -2.6667
+        },
+        {
+          "music_source_marker_s": 27.009208,
+          "judgement_reference_marker_s": 26.996,
+          "reference_minus_music_ms": -13.2083
+        },
+        {
+          "music_source_marker_s": 31.00925,
+          "judgement_reference_marker_s": 31.030667,
+          "reference_minus_music_ms": 21.4167
+        },
+        {
+          "music_source_marker_s": 35.009375,
+          "judgement_reference_marker_s": 35.02,
+          "reference_minus_music_ms": 10.625
+        },
+        {
+          "music_source_marker_s": 39.009292,
+          "judgement_reference_marker_s": 39.009333,
+          "reference_minus_music_ms": 0.0417
+        },
+        {
+          "music_source_marker_s": 43.00925,
+          "judgement_reference_marker_s": 42.998667,
+          "reference_minus_music_ms": -10.5833
+        },
+        {
+          "music_source_marker_s": 47.009333,
+          "judgement_reference_marker_s": 47.033333,
+          "reference_minus_music_ms": 24.0
+        },
+        {
+          "music_source_marker_s": 51.00925,
+          "judgement_reference_marker_s": 51.022667,
+          "reference_minus_music_ms": 13.4167
+        },
+        {
+          "music_source_marker_s": 55.009375,
+          "judgement_reference_marker_s": 55.012,
+          "reference_minus_music_ms": 2.625
+        },
+        {
+          "music_source_marker_s": 59.009292,
+          "judgement_reference_marker_s": 59.046667,
+          "reference_minus_music_ms": 37.375
+        },
+        {
+          "music_source_marker_s": 63.009333,
+          "judgement_reference_marker_s": 63.036,
+          "reference_minus_music_ms": 26.6667
+        },
+        {
+          "music_source_marker_s": 67.009375,
+          "judgement_reference_marker_s": 67.025333,
+          "reference_minus_music_ms": 15.9583
+        },
+        {
+          "music_source_marker_s": 71.009208,
+          "judgement_reference_marker_s": 71.014667,
+          "reference_minus_music_ms": 5.4583
+        },
+        {
+          "music_source_marker_s": 75.009292,
+          "judgement_reference_marker_s": 75.004,
+          "reference_minus_music_ms": -5.2917
+        },
+        {
+          "music_source_marker_s": 79.009417,
+          "judgement_reference_marker_s": 78.993333,
+          "reference_minus_music_ms": -16.0833
+        }
+      ],
+      "median_delta_ms": 8.0833,
+      "max_abs_delta_ms": 37.375
+    },
+    "before_fast_window_fix_1.50": {
+      "rate": 1.5,
+      "music_carrier_hz": null,
+      "sample_rate": 24000,
+      "captured_seconds": 627.0506666666666,
+      "beats": [
+        {
+          "music_source_marker_s": 15.074625,
+          "judgement_reference_marker_s": 14.96,
+          "reference_minus_music_ms": -114.625
+        },
+        {
+          "music_source_marker_s": 16.40775,
+          "judgement_reference_marker_s": 16.274667,
+          "reference_minus_music_ms": -133.0833
+        },
+        {
+          "music_source_marker_s": 17.741083,
+          "judgement_reference_marker_s": 17.634667,
+          "reference_minus_music_ms": -106.4167
+        },
+        {
+          "music_source_marker_s": 19.07475,
+          "judgement_reference_marker_s": 18.949333,
+          "reference_minus_music_ms": -125.4167
+        },
+        {
+          "music_source_marker_s": 20.408125,
+          "judgement_reference_marker_s": 20.264,
+          "reference_minus_music_ms": -144.125
+        },
+        {
+          "music_source_marker_s": 21.740958,
+          "judgement_reference_marker_s": 21.624,
+          "reference_minus_music_ms": -116.9583
+        },
+        {
+          "music_source_marker_s": 23.074333,
+          "judgement_reference_marker_s": 22.938667,
+          "reference_minus_music_ms": -135.6667
+        },
+        {
+          "music_source_marker_s": 24.407625,
+          "judgement_reference_marker_s": 24.298667,
+          "reference_minus_music_ms": -108.9583
+        },
+        {
+          "music_source_marker_s": 25.741042,
+          "judgement_reference_marker_s": 25.613333,
+          "reference_minus_music_ms": -127.7083
+        },
+        {
+          "music_source_marker_s": 27.074417,
+          "judgement_reference_marker_s": 26.928,
+          "reference_minus_music_ms": -146.4167
+        },
+        {
+          "music_source_marker_s": 28.408083,
+          "judgement_reference_marker_s": 28.288,
+          "reference_minus_music_ms": -120.0833
+        },
+        {
+          "music_source_marker_s": 29.741083,
+          "judgement_reference_marker_s": 29.602667,
+          "reference_minus_music_ms": -138.4167
+        },
+        {
+          "music_source_marker_s": 31.0745,
+          "judgement_reference_marker_s": 30.962667,
+          "reference_minus_music_ms": -111.8333
+        },
+        {
+          "music_source_marker_s": 32.407917,
+          "judgement_reference_marker_s": 32.277333,
+          "reference_minus_music_ms": -130.5833
+        },
+        {
+          "music_source_marker_s": 33.741292,
+          "judgement_reference_marker_s": 33.637333,
+          "reference_minus_music_ms": -103.9583
+        },
+        {
+          "music_source_marker_s": 35.074292,
+          "judgement_reference_marker_s": 34.952,
+          "reference_minus_music_ms": -122.2917
+        }
+      ],
+      "median_delta_ms": -123.8542,
+      "max_abs_delta_ms": 146.4167
+    },
+    "final_1.50": {
+      "rate": 1.5,
+      "music_carrier_hz": null,
+      "sample_rate": 24000,
+      "captured_seconds": 92.38933333333334,
+      "beats": [
+        {
+          "music_source_marker_s": 9.861292,
+          "judgement_reference_marker_s": 9.882667,
+          "reference_minus_music_ms": 21.375
+        },
+        {
+          "music_source_marker_s": 11.194417,
+          "judgement_reference_marker_s": 11.197333,
+          "reference_minus_music_ms": 2.9167
+        },
+        {
+          "music_source_marker_s": 12.52775,
+          "judgement_reference_marker_s": 12.557333,
+          "reference_minus_music_ms": 29.5833
+        },
+        {
+          "music_source_marker_s": 13.861375,
+          "judgement_reference_marker_s": 13.872,
+          "reference_minus_music_ms": 10.625
+        },
+        {
+          "music_source_marker_s": 15.194792,
+          "judgement_reference_marker_s": 15.232,
+          "reference_minus_music_ms": 37.2083
+        },
+        {
+          "music_source_marker_s": 16.527625,
+          "judgement_reference_marker_s": 16.546667,
+          "reference_minus_music_ms": 19.0417
+        },
+        {
+          "music_source_marker_s": 17.861,
+          "judgement_reference_marker_s": 17.861333,
+          "reference_minus_music_ms": 0.3333
+        },
+        {
+          "music_source_marker_s": 19.194292,
+          "judgement_reference_marker_s": 19.221333,
+          "reference_minus_music_ms": 27.0417
+        },
+        {
+          "music_source_marker_s": 20.527708,
+          "judgement_reference_marker_s": 20.536,
+          "reference_minus_music_ms": 8.2917
+        },
+        {
+          "music_source_marker_s": 21.861083,
+          "judgement_reference_marker_s": 21.896,
+          "reference_minus_music_ms": 34.9167
+        },
+        {
+          "music_source_marker_s": 23.19475,
+          "judgement_reference_marker_s": 23.210667,
+          "reference_minus_music_ms": 15.9167
+        },
+        {
+          "music_source_marker_s": 24.52775,
+          "judgement_reference_marker_s": 24.570667,
+          "reference_minus_music_ms": 42.9167
+        },
+        {
+          "music_source_marker_s": 25.861167,
+          "judgement_reference_marker_s": 25.885333,
+          "reference_minus_music_ms": 24.1667
+        },
+        {
+          "music_source_marker_s": 27.194583,
+          "judgement_reference_marker_s": 27.245333,
+          "reference_minus_music_ms": 50.75
+        },
+        {
+          "music_source_marker_s": 28.527917,
+          "judgement_reference_marker_s": 28.56,
+          "reference_minus_music_ms": 32.0833
+        },
+        {
+          "music_source_marker_s": 29.861458,
+          "judgement_reference_marker_s": 29.874667,
+          "reference_minus_music_ms": 13.2083
+        },
+        {
+          "music_source_marker_s": 31.194625,
+          "judgement_reference_marker_s": 31.234667,
+          "reference_minus_music_ms": 40.0417
+        }
+      ],
+      "median_delta_ms": 24.1667,
+      "max_abs_delta_ms": 50.75
+    },
+    "final_0.50": {
+      "rate": 0.5,
+      "music_carrier_hz": null,
+      "sample_rate": 24000,
+      "captured_seconds": 144.16,
+      "beats": [
+        {
+          "music_source_marker_s": 16.528,
+          "judgement_reference_marker_s": 16.546667,
+          "reference_minus_music_ms": 18.6667
+        },
+        {
+          "music_source_marker_s": 20.527917,
+          "judgement_reference_marker_s": 20.536,
+          "reference_minus_music_ms": 8.0833
+        },
+        {
+          "music_source_marker_s": 24.528,
+          "judgement_reference_marker_s": 24.525333,
+          "reference_minus_music_ms": -2.6667
+        },
+        {
+          "music_source_marker_s": 28.527917,
+          "judgement_reference_marker_s": 28.56,
+          "reference_minus_music_ms": 32.0833
+        },
+        {
+          "music_source_marker_s": 32.527917,
+          "judgement_reference_marker_s": 32.549333,
+          "reference_minus_music_ms": 21.4167
+        },
+        {
+          "music_source_marker_s": 36.528042,
+          "judgement_reference_marker_s": 36.538667,
+          "reference_minus_music_ms": 10.625
+        },
+        {
+          "music_source_marker_s": 40.527958,
+          "judgement_reference_marker_s": 40.573333,
+          "reference_minus_music_ms": 45.375
+        },
+        {
+          "music_source_marker_s": 44.527917,
+          "judgement_reference_marker_s": 44.517333,
+          "reference_minus_music_ms": -10.5833
+        },
+        {
+          "music_source_marker_s": 48.528,
+          "judgement_reference_marker_s": 48.552,
+          "reference_minus_music_ms": 24.0
+        },
+        {
+          "music_source_marker_s": 52.527917,
+          "judgement_reference_marker_s": 52.541333,
+          "reference_minus_music_ms": 13.4167
+        },
+        {
+          "music_source_marker_s": 56.528042,
+          "judgement_reference_marker_s": 56.530667,
+          "reference_minus_music_ms": 2.625
+        },
+        {
+          "music_source_marker_s": 60.528042,
+          "judgement_reference_marker_s": 60.52,
+          "reference_minus_music_ms": -8.0417
+        },
+        {
+          "music_source_marker_s": 64.528,
+          "judgement_reference_marker_s": 64.554667,
+          "reference_minus_music_ms": 26.6667
+        },
+        {
+          "music_source_marker_s": 68.528042,
+          "judgement_reference_marker_s": 68.544,
+          "reference_minus_music_ms": 15.9583
+        },
+        {
+          "music_source_marker_s": 72.527875,
+          "judgement_reference_marker_s": 72.533333,
+          "reference_minus_music_ms": 5.4583
+        },
+        {
+          "music_source_marker_s": 76.527958,
+          "judgement_reference_marker_s": 76.522667,
+          "reference_minus_music_ms": -5.2917
+        },
+        {
+          "music_source_marker_s": 80.528,
+          "judgement_reference_marker_s": 80.557333,
+          "reference_minus_music_ms": 29.3333
+        }
+      ],
+      "median_delta_ms": 13.4167,
+      "max_abs_delta_ms": 45.375
+    }
+  },
+  "source_fixture": {
+    "seconds": 42,
+    "sample_rate": 48000,
+    "frames": 2016000,
+    "first_note_ms": 5000,
+    "note_spacing_ms": 2000,
+    "sha256": "656f2dd9041be77739662914001ec4f8d1f0c50a10b530b1157d654596b55efa"
+  },
+  "old_cache": {
+    "source_prefix_missing_frames": 19200,
+    "source_prefix_missing_seconds": 0.4,
+    "expected_output_frames_at_0_50": 4032000,
+    "actual_output_frames_at_0_50": 3993600
+  },
+  "final_cache": {
+    "source_frames": 2016000,
+    "expected_source_frames": 2016000,
+    "output_frames_at_0_50": 4032000,
+    "output_frames_at_1_50": 1344000
+  },
+  "limits": [
+    "Reference click is a timing marker, not measurement of every native hit-effect waveform.",
+    "Virtual audio buffer and native frame dispatch remain quantized. No physical phone/headphone/144 Hz GPU timing measurement.",
+    "No promise of sample-exact equivalence to speeding/slowing a recorded video on every device."
+  ]
+}

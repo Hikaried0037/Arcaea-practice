@@ -1,0 +1,720 @@
+{
+  "processor": "Signalsmith Stretch 1.3.2 / SoundTouch 2.4.1 native production renderer",
+  "sample_rate": 48000,
+  "source_seconds": 12,
+  "result": "passed",
+  "cases": [
+    {
+      "rate": 0.25,
+      "changes_pitch": false,
+      "output_frames": 2304000,
+      "expected_frames": 2304000,
+      "fundamental_hz": 600.0,
+      "treble_amplitude": 0.1353138024998016,
+      "peak_amplitude": 0.7167171835899353,
+      "stereo_error_peak": 0.00027692317962646484,
+      "processing_seconds": 2.20938
+    },
+    {
+      "rate": 0.37,
+      "changes_pitch": false,
+      "output_frames": 1556756,
+      "expected_frames": 1556757,
+      "fundamental_hz": 600.0,
+      "treble_amplitude": 0.14246155326523022,
+      "peak_amplitude": 0.5870952606201172,
+      "stereo_error_peak": 0.00043144822120666504,
+      "processing_seconds": 1.49465
+    },
+    {
+      "rate": 0.5,
+      "changes_pitch": false,
+      "output_frames": 1152000,
+      "expected_frames": 1152000,
+      "fundamental_hz": 600.0,
+      "treble_amplitude": 0.1424674897107893,
+      "peak_amplitude": 0.5995810031890869,
+      "stereo_error_peak": 0.00017455220222473145,
+      "processing_seconds": 0.74484
+    },
+    {
+      "rate": 0.75,
+      "changes_pitch": false,
+      "output_frames": 768000,
+      "expected_frames": 768000,
+      "fundamental_hz": 600.0,
+      "treble_amplitude": 0.149992682419663,
+      "peak_amplitude": 0.5143128037452698,
+      "stereo_error_peak": 3.6776065826416016e-05,
+      "processing_seconds": 0.49846
+    },
+    {
+      "rate": 1.01,
+      "changes_pitch": false,
+      "output_frames": 570297,
+      "expected_frames": 570297,
+      "fundamental_hz": 600.0,
+      "treble_amplitude": 0.14999803223648722,
+      "peak_amplitude": 0.5093677639961243,
+      "stereo_error_peak": 0.0001347064971923828,
+      "processing_seconds": 0.40517
+    },
+    {
+      "rate": 1.25,
+      "changes_pitch": false,
+      "output_frames": 460800,
+      "expected_frames": 460800,
+      "fundamental_hz": 600.0,
+      "treble_amplitude": 0.14998004041340676,
+      "peak_amplitude": 0.7909736037254333,
+      "stereo_error_peak": 5.081295967102051e-05,
+      "processing_seconds": 0.34331
+    },
+    {
+      "rate": 1.5,
+      "changes_pitch": false,
+      "output_frames": 384000,
+      "expected_frames": 384000,
+      "fundamental_hz": 600.0,
+      "treble_amplitude": 0.14998232890549976,
+      "peak_amplitude": 0.9122112989425659,
+      "stereo_error_peak": 5.607679486274719e-05,
+      "processing_seconds": 0.24967
+    },
+    {
+      "rate": 2.0,
+      "changes_pitch": false,
+      "output_frames": 288000,
+      "expected_frames": 288000,
+      "fundamental_hz": 600.0,
+      "treble_amplitude": 0.14998355224672386,
+      "peak_amplitude": 0.9408405423164368,
+      "stereo_error_peak": 6.05657696723938e-05,
+      "processing_seconds": 0.20978
+    },
+    {
+      "rate": 0.25,
+      "changes_pitch": true,
+      "output_frames": 2304000,
+      "expected_frames": 2304000,
+      "fundamental_hz": 150.0,
+      "treble_amplitude": 0.11481636426646889,
+      "peak_amplitude": 0.46224555373191833,
+      "stereo_error_peak": 2.384185791015625e-07,
+      "processing_seconds": 0.87458
+    },
+    {
+      "rate": 0.5,
+      "changes_pitch": true,
+      "output_frames": 1152000,
+      "expected_frames": 1152000,
+      "fundamental_hz": 300.0,
+      "treble_amplitude": 0.11588223988777638,
+      "peak_amplitude": 0.4619275629520416,
+      "stereo_error_peak": 2.682209014892578e-07,
+      "processing_seconds": 0.44226
+    },
+    {
+      "rate": 1.5,
+      "changes_pitch": true,
+      "output_frames": 384000,
+      "expected_frames": 384000,
+      "fundamental_hz": 900.0,
+      "treble_amplitude": null,
+      "peak_amplitude": 0.3510398268699646,
+      "stereo_error_peak": 1.7881393432617188e-07,
+      "processing_seconds": 0.21943
+    },
+    {
+      "rate": 2.0,
+      "changes_pitch": true,
+      "output_frames": 288000,
+      "expected_frames": 288000,
+      "fundamental_hz": 1200.0,
+      "treble_amplitude": null,
+      "peak_amplitude": 0.35026106238365173,
+      "stereo_error_peak": 2.086162567138672e-07,
+      "processing_seconds": 0.19107
+    }
+  ],
+  "polyphonic": [
+    {
+      "rate": 0.25,
+      "tones": [
+        {
+          "source_hz": 50,
+          "output_hz": 50.0,
+          "amplitude": 0.29426958086386784
+        },
+        {
+          "source_hz": 437,
+          "output_hz": 437.0,
+          "amplitude": 0.08669790620950145
+        }
+      ]
+    },
+    {
+      "rate": 0.37,
+      "tones": [
+        {
+          "source_hz": 50,
+          "output_hz": 50.0,
+          "amplitude": 0.2995447544820266
+        },
+        {
+          "source_hz": 437,
+          "output_hz": 437.0,
+          "amplitude": 0.09309848102581911
+        }
+      ]
+    },
+    {
+      "rate": 0.5,
+      "tones": [
+        {
+          "source_hz": 50,
+          "output_hz": 50.0,
+          "amplitude": 0.29955001876872417
+        },
+        {
+          "source_hz": 437,
+          "output_hz": 437.0,
+          "amplitude": 0.09310098074632757
+        }
+      ]
+    },
+    {
+      "rate": 1.33,
+      "tones": [
+        {
+          "source_hz": 50,
+          "output_hz": 50.0,
+          "amplitude": 0.29998899335567347
+        },
+        {
+          "source_hz": 437,
+          "output_hz": 437.0,
+          "amplitude": 0.09998591404356591
+        }
+      ]
+    },
+    {
+      "rate": 2.0,
+      "tones": [
+        {
+          "source_hz": 50,
+          "output_hz": 50.0,
+          "amplitude": 0.29999229055564364
+        },
+        {
+          "source_hz": 437,
+          "output_hz": 437.0,
+          "amplitude": 0.09998931665957396
+        }
+      ]
+    }
+  ],
+  "accelerated_transients": [
+    {
+      "rate": 1.01,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.6029
+    },
+    {
+      "rate": 1.02,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.5229
+    },
+    {
+      "rate": 1.03,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.4413
+    },
+    {
+      "rate": 1.04,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.2059
+    },
+    {
+      "rate": 1.05,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.246
+    },
+    {
+      "rate": 1.06,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.4359
+    },
+    {
+      "rate": 1.07,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.7002
+    },
+    {
+      "rate": 1.08,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.3349
+    },
+    {
+      "rate": 1.09,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.7068
+    },
+    {
+      "rate": 1.1,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.7841
+    },
+    {
+      "rate": 1.11,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.4829
+    },
+    {
+      "rate": 1.12,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.5022
+    },
+    {
+      "rate": 1.13,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.6503
+    },
+    {
+      "rate": 1.14,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.9806
+    },
+    {
+      "rate": 1.15,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.7319
+    },
+    {
+      "rate": 1.16,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.6774
+    },
+    {
+      "rate": 1.17,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.8593
+    },
+    {
+      "rate": 1.18,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.7514
+    },
+    {
+      "rate": 1.19,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 0.8916
+    },
+    {
+      "rate": 1.2,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.0035
+    },
+    {
+      "rate": 1.21,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.0021
+    },
+    {
+      "rate": 1.22,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.0929
+    },
+    {
+      "rate": 1.23,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.1101
+    },
+    {
+      "rate": 1.24,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.166
+    },
+    {
+      "rate": 1.25,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.225
+    },
+    {
+      "rate": 1.26,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.2464
+    },
+    {
+      "rate": 1.27,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.2918
+    },
+    {
+      "rate": 1.28,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.3014
+    },
+    {
+      "rate": 1.29,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.3259
+    },
+    {
+      "rate": 1.3,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.3494
+    },
+    {
+      "rate": 1.31,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.4022
+    },
+    {
+      "rate": 1.32,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.4179
+    },
+    {
+      "rate": 1.33,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.4132
+    },
+    {
+      "rate": 1.34,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.435
+    },
+    {
+      "rate": 1.35,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.7948
+    },
+    {
+      "rate": 1.36,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.5558
+    },
+    {
+      "rate": 1.37,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.5794
+    },
+    {
+      "rate": 1.38,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.6262
+    },
+    {
+      "rate": 1.39,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.6136
+    },
+    {
+      "rate": 1.4,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.2173
+    },
+    {
+      "rate": 1.41,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.2272
+    },
+    {
+      "rate": 1.42,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.7007
+    },
+    {
+      "rate": 1.43,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.3351
+    },
+    {
+      "rate": 1.44,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.7494
+    },
+    {
+      "rate": 1.45,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.8513
+    },
+    {
+      "rate": 1.46,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.0517
+    },
+    {
+      "rate": 1.47,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.6988
+    },
+    {
+      "rate": 1.48,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.9133
+    },
+    {
+      "rate": 1.49,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.8371
+    },
+    {
+      "rate": 1.5,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.9861
+    },
+    {
+      "rate": 1.51,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.7329
+    },
+    {
+      "rate": 1.52,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.7802
+    },
+    {
+      "rate": 1.53,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.4063
+    },
+    {
+      "rate": 1.54,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.0089
+    },
+    {
+      "rate": 1.55,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.4435
+    },
+    {
+      "rate": 1.56,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.1549
+    },
+    {
+      "rate": 1.57,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.6295
+    },
+    {
+      "rate": 1.58,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.6443
+    },
+    {
+      "rate": 1.59,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5419
+    },
+    {
+      "rate": 1.6,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.0495
+    },
+    {
+      "rate": 1.61,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.4048
+    },
+    {
+      "rate": 1.62,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.106
+    },
+    {
+      "rate": 1.63,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.4638
+    },
+    {
+      "rate": 1.64,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.2683
+    },
+    {
+      "rate": 1.65,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.2677
+    },
+    {
+      "rate": 1.66,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 1.9533
+    },
+    {
+      "rate": 1.67,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.1989
+    },
+    {
+      "rate": 1.68,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5233
+    },
+    {
+      "rate": 1.69,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.135
+    },
+    {
+      "rate": 1.7,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.4841
+    },
+    {
+      "rate": 1.71,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.6676
+    },
+    {
+      "rate": 1.72,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.2747
+    },
+    {
+      "rate": 1.73,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.6535
+    },
+    {
+      "rate": 1.74,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.3465
+    },
+    {
+      "rate": 1.75,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.3929
+    },
+    {
+      "rate": 1.76,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.9219
+    },
+    {
+      "rate": 1.77,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.9519
+    },
+    {
+      "rate": 1.78,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.9803
+    },
+    {
+      "rate": 1.79,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.9841
+    },
+    {
+      "rate": 1.8,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.9815
+    },
+    {
+      "rate": 1.81,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 3.0813
+    },
+    {
+      "rate": 1.82,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 3.0108
+    },
+    {
+      "rate": 1.83,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 3.0173
+    },
+    {
+      "rate": 1.84,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.4878
+    },
+    {
+      "rate": 1.85,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5034
+    },
+    {
+      "rate": 1.86,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.4996
+    },
+    {
+      "rate": 1.87,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5159
+    },
+    {
+      "rate": 1.88,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 3.1113
+    },
+    {
+      "rate": 1.89,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5389
+    },
+    {
+      "rate": 1.9,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5208
+    },
+    {
+      "rate": 1.91,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 3.1588
+    },
+    {
+      "rate": 1.92,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5204
+    },
+    {
+      "rate": 1.93,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5344
+    },
+    {
+      "rate": 1.94,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 3.1862
+    },
+    {
+      "rate": 1.95,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.5823
+    },
+    {
+      "rate": 1.96,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.7334
+    },
+    {
+      "rate": 1.97,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.9052
+    },
+    {
+      "rate": 1.98,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.7287
+    },
+    {
+      "rate": 1.99,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.6811
+    },
+    {
+      "rate": 2.0,
+      "attacks_detected": 5,
+      "max_onset_error_ms": 2.7188
+    }
+  ],
+  "limitations": "Synthetic spectral/duration measurements do not establish perceptual equivalence on all music"
+}

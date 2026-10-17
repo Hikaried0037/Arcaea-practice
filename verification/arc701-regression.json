@@ -1,0 +1,57 @@
+{
+  "result": "passed",
+  "profile": "Arc701 7.0.1c ARM64",
+  "settings_cases": 7400,
+  "clock_cases": 160,
+  "smooth_cases": [
+    {
+      "rate": 0.5,
+      "phase": "lead_complete",
+      "queries": 87,
+      "repeated_chart_frames": 0,
+      "backward_chart_frames": 0,
+      "max_chart_step_ms": 4
+    },
+    {
+      "rate": 0.5,
+      "phase": "resume",
+      "queries": 86,
+      "repeated_chart_frames": 0,
+      "backward_chart_frames": 0,
+      "max_chart_step_ms": 4
+    },
+    {
+      "rate": 1.0,
+      "phase": "lead_complete",
+      "queries": 87,
+      "repeated_chart_frames": 0,
+      "backward_chart_frames": 0,
+      "max_chart_step_ms": 7
+    },
+    {
+      "rate": 1.0,
+      "phase": "resume",
+      "queries": 86,
+      "repeated_chart_frames": 0,
+      "backward_chart_frames": 0,
+      "max_chart_step_ms": 7
+    },
+    {
+      "rate": 2.0,
+      "phase": "lead_complete",
+      "queries": 87,
+      "repeated_chart_frames": 0,
+      "backward_chart_frames": 0,
+      "max_chart_step_ms": 14
+    },
+    {
+      "rate": 2.0,
+      "phase": "resume",
+      "queries": 86,
+      "repeated_chart_frames": 0,
+      "backward_chart_frames": 0,
+      "max_chart_step_ms": 14
+    }
+  ],
+  "limitations": "Synthetic ARM64 execution; no physical headphone or GPU measurement"
+}

@@ -1,0 +1,10 @@
+{
+  "result": "passed",
+  "existing_production_files_unchanged": 82,
+  "shared_audio_decode_and_cache": "unchanged from r8/r15",
+  "native_profile": "full gameplay implementation with verified Arc701 address mapping; shell external resource bridge with root substitution",
+  "java": "latest shell Java with external root/request code substitution only",
+  "original_game_sha256": "fa7ab65059ae2639a54b2daf37c0cd2d2084f620c2c322e8252f740e713fc6a1",
+  "checked_native_prologues": 20,
+  "checked_tap_update_vtable_slots": 2
+}
