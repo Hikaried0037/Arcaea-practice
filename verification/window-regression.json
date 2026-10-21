@@ -1,0 +1,824 @@
+{
+  "passed": true,
+  "checks": 90,
+  "method": "Original and final patched ARM64 instructions executed with Unicorn and synthetic Objective-C/UIKit/Foundation responses, three ASLR slides",
+  "scope": "Window selection/cache and startup diagnostic control flow only; not an iOS runtime or full gameplay test",
+  "results": [
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {},
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {},
+      "build": "fixed",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "build": "original",
+      "found": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x1000000",
+      "root_controller": false,
+      "build": "fixed",
+      "found": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {},
+      "build": "original",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {},
+      "build": "fixed",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "build": "original",
+      "found": true
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x1000000",
+      "root_controller": true,
+      "build": "fixed",
+      "found": true
+    },
+    {
+      "test": "bootstrap_and_tick_diagnostics_no_repeat_and_ABI",
+      "slide": "0x1000000",
+      "native_init_result": 0,
+      "passed": true
+    },
+    {
+      "test": "bootstrap_and_tick_diagnostics_no_repeat_and_ABI",
+      "slide": "0x1000000",
+      "native_init_result": 1,
+      "passed": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {},
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {},
+      "build": "fixed",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "build": "original",
+      "found": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x123000000",
+      "root_controller": false,
+      "build": "fixed",
+      "found": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {},
+      "build": "original",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {},
+      "build": "fixed",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "build": "original",
+      "found": true
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x123000000",
+      "root_controller": true,
+      "build": "fixed",
+      "found": true
+    },
+    {
+      "test": "bootstrap_and_tick_diagnostics_no_repeat_and_ABI",
+      "slide": "0x123000000",
+      "native_init_result": 0,
+      "passed": true
+    },
+    {
+      "test": "bootstrap_and_tick_diagnostics_no_repeat_and_ABI",
+      "slide": "0x123000000",
+      "native_init_result": 1,
+      "passed": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {},
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {},
+      "build": "fixed",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "build": "original",
+      "found": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x700000000",
+      "root_controller": false,
+      "build": "fixed",
+      "found": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {},
+      "build": "original",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {},
+      "build": "fixed",
+      "accepted": true
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "hidden": 1
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "alpha": 0.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "level": 1.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "width": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "original",
+      "accepted": false
+    },
+    {
+      "test": "normal_window",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "properties": {
+        "height": 32.0
+      },
+      "build": "fixed",
+      "accepted": false
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "build": "original",
+      "found": true
+    },
+    {
+      "test": "game_window_selection_and_cache",
+      "slide": "0x700000000",
+      "root_controller": true,
+      "build": "fixed",
+      "found": true
+    },
+    {
+      "test": "bootstrap_and_tick_diagnostics_no_repeat_and_ABI",
+      "slide": "0x700000000",
+      "native_init_result": 0,
+      "passed": true
+    },
+    {
+      "test": "bootstrap_and_tick_diagnostics_no_repeat_and_ABI",
+      "slide": "0x700000000",
+      "native_init_result": 1,
+      "passed": true
+    }
+  ]
+}

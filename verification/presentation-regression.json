@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": 10,
+  "matrix_cases": 1920,
+  "cases": [
+    "r18_reproduced_texture_rebound_but_button_transparent_and_number_hidden",
+    "0x100000000_all_masks_actual_class_name_number_opacity_selection_and_missing_state",
+    "0x100000000_100_song_mode_changes_refresh_real_rating_plus_and_hide_alternate_label",
+    "0x100000000_uninitialized_label_panel_guarded",
+    "0x123000000_all_masks_actual_class_name_number_opacity_selection_and_missing_state",
+    "0x123000000_100_song_mode_changes_refresh_real_rating_plus_and_hide_alternate_label",
+    "0x123000000_uninitialized_label_panel_guarded",
+    "0x700000000_all_masks_actual_class_name_number_opacity_selection_and_missing_state",
+    "0x700000000_100_song_mode_changes_refresh_real_rating_plus_and_hide_alternate_label",
+    "0x700000000_uninitialized_label_panel_guarded"
+  ],
+  "main_sha256": "8c0fa13576dac6f9da5fd9f15cb604e89f0d1a16ba2e401b699957ab64537c78",
+  "scope": "Execute native tab wrappers, difficulty accessor and full native level-render control flow. Font/rasterization, string allocation, number formatting and scene lookup use host substitutes; no physical iPad rendering."
+}

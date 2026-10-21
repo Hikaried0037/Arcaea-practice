@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "source": "User supplied 23:20 import-button crash; personal identifiers omitted",
+  "exception": "EXC_CRASH / SIGABRT",
+  "backtrace": [
+    "UIResponder doesNotRecognizeSelector:",
+    "ArcLibrary.dylib pick + 468 (image offset 8968)",
+    "WebKit message dispatch"
+  ],
+  "root_cause": "Unsupported presentViewController:animated:completionHandler: selector",
+  "correction": "presentViewController:animated:completion:",
+  "affected_entries": [
+    "Import song ZIP",
+    "Replace pack cover"
+  ],
+  "regression": "test_library_entries.py reproduces old crash and tests real ARM64 corrected entry/callback code against host framework models",
+  "physical_r14_validation": "Pending user iPad test"
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source": "User supplied 2026-10-20 10:54 import/selection recording and crash; private device/signing identifiers omitted",
+  "exception": "EXC_BAD_ACCESS / KERN_PROTECTION_FAILURE",
+  "termination": "CODESIGNING Invalid Page",
+  "instruction_abort_image_offset": "0x1652000",
+  "runtime_region": "__DATA, rw-/rw-",
+  "root_cause": "r15 confused island file offset with its VM offset after zero-fill DATA",
+  "correct_file_offset": "0x1652000",
+  "correct_image_vm_offset": "0x16aa000",
+  "correct_runtime_region": "__PRACCODE, r-x/r-x",
+  "regression": "Real segment loading, zero-fill and protection enforcement reproduces old UC_ERR_FETCH_PROT and accepts corrected code at three load bases",
+  "physical_r16_validation": "Pending iPad test"
+}

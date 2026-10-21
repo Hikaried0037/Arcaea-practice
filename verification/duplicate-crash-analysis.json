@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "exception": "EXC_BAD_ACCESS SIGSEGV KERN_INVALID_ADDRESS 0x8",
+  "fault_main_offset": "0xf280b0",
+  "caller_return_main_offset": "0x87cbe4",
+  "operation": "Cocos Ref::retain on null row object during song-selection vector clone",
+  "repair": "Skip null source entry before vector append and retain; separately reject repeated chart content and merge legacy identical local records",
+  "privacy": "No device/account identifiers or raw IPS included",
+  "scope": "Crash-log stack and disassembly correlation; host reproduction, physical iPad confirmation pending"
+}

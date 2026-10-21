@@ -1,0 +1,226 @@
+{
+  "passed": true,
+  "checks": 42,
+  "scope": "ARM64 startup selection, unchanged portrait/avatar and selection-banner regression.\nNative owner/asset/UI methods are synthetic; no iOS rendering or timing proof.\n",
+  "cases": [
+    {
+      "test": "selection_applied_before_menu_bounds_available_with_retry_until_native_owner_ready",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x1000000",
+      "index": 0
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x1000000",
+      "index": 23
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x1000000",
+      "index": 128
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x1000000",
+      "index": 129
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x1000000",
+      "index": 4294967295
+    },
+    {
+      "test": "correct_initial_portrait_and_avatar_are_not_rebuilt_or_faded",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "same_character_form_change_still_refreshes_once",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "stale_portrait_avatar_still_repaired_once",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "successful_partner_notice_consumed_without_creating_bottom_banner",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x1000000",
+      "self_profile": true,
+      "exact_caller": true,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x1000000",
+      "self_profile": false,
+      "exact_caller": true,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x1000000",
+      "self_profile": true,
+      "exact_caller": false,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x1000000",
+      "self_profile": true,
+      "exact_caller": true,
+      "valid_selection": false
+    },
+    {
+      "test": "selection_applied_before_menu_bounds_available_with_retry_until_native_owner_ready",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x123000000",
+      "index": 0
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x123000000",
+      "index": 23
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x123000000",
+      "index": 128
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x123000000",
+      "index": 129
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x123000000",
+      "index": 4294967295
+    },
+    {
+      "test": "correct_initial_portrait_and_avatar_are_not_rebuilt_or_faded",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "same_character_form_change_still_refreshes_once",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "stale_portrait_avatar_still_repaired_once",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "successful_partner_notice_consumed_without_creating_bottom_banner",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x123000000",
+      "self_profile": true,
+      "exact_caller": true,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x123000000",
+      "self_profile": false,
+      "exact_caller": true,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x123000000",
+      "self_profile": true,
+      "exact_caller": false,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x123000000",
+      "self_profile": true,
+      "exact_caller": true,
+      "valid_selection": false
+    },
+    {
+      "test": "selection_applied_before_menu_bounds_available_with_retry_until_native_owner_ready",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x700000000",
+      "index": 0
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x700000000",
+      "index": 23
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x700000000",
+      "index": 128
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x700000000",
+      "index": 129
+    },
+    {
+      "test": "early_restore_only_valid_pending_choices",
+      "slide": "0x700000000",
+      "index": 4294967295
+    },
+    {
+      "test": "correct_initial_portrait_and_avatar_are_not_rebuilt_or_faded",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "same_character_form_change_still_refreshes_once",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "stale_portrait_avatar_still_repaired_once",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "successful_partner_notice_consumed_without_creating_bottom_banner",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x700000000",
+      "self_profile": true,
+      "exact_caller": true,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x700000000",
+      "self_profile": false,
+      "exact_caller": true,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x700000000",
+      "self_profile": true,
+      "exact_caller": false,
+      "valid_selection": true
+    },
+    {
+      "test": "first_self_icon_uses_selected_partner_before_texture_lookup",
+      "slide": "0x700000000",
+      "self_profile": true,
+      "exact_caller": true,
+      "valid_selection": false
+    }
+  ]
+}

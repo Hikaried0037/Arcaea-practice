@@ -1,0 +1,221 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "command": [
+        "python.exe",
+        "build_library.py",
+        "--zig",
+        "zig.exe"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "zig.exe",
+        "cc",
+        "-target",
+        "aarch64-ios.12.4",
+        "-c",
+        "diagnostics.s",
+        "-o",
+        "diagnostics.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "zig.exe",
+        "cc",
+        "-target",
+        "aarch64-ios.12.4",
+        "-c",
+        "difficulty.s",
+        "-o",
+        "difficulty.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "zig.exe",
+        "cc",
+        "-target",
+        "aarch64-ios.12.4",
+        "-c",
+        "previous_difficulty_r18.s",
+        "-o",
+        "previous_difficulty_r18.o"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "node.exe",
+        "test_catalog.cjs"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_windows.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_runloop.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_native_entry.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_scan_budget.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_lifecycle_partner.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_pause_audio.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_entry_partner.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_ui_routing.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_startup_partner.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_macho.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_library_link.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_dyld_layout.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_library_entries.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_difficulty.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_r18.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_presentation.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_migration_r18.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_backgrounds.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_bg_dimensions.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python.exe",
+        "test_full_catalog.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "node.exe",
+        "test_ui_entries.cjs"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "node.exe",
+        "test_ui.cjs"
+      ],
+      "returncode": 0
+    }
+  ],
+  "library_sha256": "e7f4475b58c758700c598d5510a979f844cd2e53643742891a08798890dec856",
+  "scope": "Exported current-source checks on host; historical r12/r13 binaries and private sample-specific test are not included; no device execution.",
+  "production_library_matches_release": true,
+  "historical_binary_reproducers_skipped": [
+    "r12 alignment reproduction",
+    "r13 selector crash reproduction"
+  ]
+}

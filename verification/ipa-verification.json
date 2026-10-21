@@ -1,0 +1,449 @@
+{
+  "revision": "windowfix-r22",
+  "input_dylib_sha256": "46d3c71cfcaa2d7c6e6e48bcd66e66b5748b8897fbb60b68f5230eac241938df",
+  "output_dylib_sha256": "122999af2c334a6c27ba33966d3fe33ec56ae345fc89708956d5e006e7e64d3b",
+  "code_island_offset": 606208,
+  "code_island_bytes": 7620,
+  "mutable_state_offset": 605952,
+  "edits": [
+    {
+      "offset": "0x19184",
+      "before": "60000090",
+      "after": "07000014"
+    },
+    {
+      "offset": "0x1933c",
+      "before": "f40300aa600000d0",
+      "after": "e00319aa06000014"
+    },
+    {
+      "offset": "0x5288",
+      "before": "01000014",
+      "after": "5e3b0214"
+    },
+    {
+      "offset": "0x29a4",
+      "before": "402c00b4",
+      "after": "c4450294"
+    },
+    {
+      "offset": "0x1254",
+      "before": "a77b0094",
+      "after": "7d4b0294"
+    },
+    {
+      "offset": "0x1478",
+      "before": "20010090007c1b91",
+      "after": "f04a02940b000014"
+    },
+    {
+      "offset": "0x14c8",
+      "before": "107b0094",
+      "after": "eb4a0294"
+    },
+    {
+      "offset": "0x1731c",
+      "before": "f657bda9",
+      "after": "c0035fd6"
+    },
+    {
+      "offset": "0xd18c",
+      "before": "42d141fd",
+      "after": "02106a1e"
+    },
+    {
+      "offset": "0x1344",
+      "before": "207b0094",
+      "after": "934c0294"
+    },
+    {
+      "offset": "0x1398",
+      "before": "c04600f9",
+      "after": "954c0294"
+    },
+    {
+      "offset": "0x2970",
+      "before": "ff0302d1",
+      "after": "81470214"
+    },
+    {
+      "offset": "0x65b4",
+      "before": "ffc302d1",
+      "after": "7e380214"
+    },
+    {
+      "offset": "0xb644",
+      "before": "13fd9f88",
+      "after": "7a240294"
+    },
+    {
+      "offset": "0xb688",
+      "before": "e80000b0",
+      "after": "70240214"
+    },
+    {
+      "offset": "0x55e4",
+      "before": "f44fbea9",
+      "after": "7d3d0214"
+    },
+    {
+      "offset": "0x7ad0",
+      "before": "c9c241f9",
+      "after": "be340214"
+    },
+    {
+      "offset": "0x1d2c",
+      "before": "88fbffb5",
+      "after": "2f4c0214"
+    },
+    {
+      "offset": "0x2c9c",
+      "before": "880240b9",
+      "after": "5b480294"
+    },
+    {
+      "offset": "0x7aa8",
+      "before": "28f3ff35",
+      "after": "1f2003d5"
+    },
+    {
+      "offset": "0x2c20",
+      "before": "08d940b9",
+      "after": "2e490294"
+    },
+    {
+      "offset": "0x7b1c",
+      "before": "c9f0ff35",
+      "after": "1f2003d5"
+    },
+    {
+      "offset": "0x2f68",
+      "before": "e923bd6d",
+      "after": "7b480214"
+    },
+    {
+      "offset": "0x6f84",
+      "before": "083f41f9",
+      "after": "68380214"
+    },
+    {
+      "offset": "0x66bc",
+      "before": "c5130094",
+      "after": "e4390294"
+    },
+    {
+      "offset": "0x2ee0",
+      "before": "e000f837",
+      "after": "0a000014"
+    },
+    {
+      "offset": "0x19ddc",
+      "before": "00013fd6",
+      "after": "10ec0194"
+    },
+    {
+      "offset": "0x1ada4",
+      "before": "fc6fbca9",
+      "after": "fbe80114"
+    },
+    {
+      "offset": "0x1be08",
+      "before": "ff4303d1",
+      "after": "c0035fd6"
+    },
+    {
+      "offset": "0x1c44c",
+      "before": "e923bd6df44f01a9",
+      "after": "00008052c0035fd6"
+    },
+    {
+      "offset": "0x1e598",
+      "before": "ff0304d1",
+      "after": "c0035fd6"
+    },
+    {
+      "offset": "0x2ab8",
+      "before": "c06240f9",
+      "after": "32000014"
+    },
+    {
+      "offset": "0x4180",
+      "before": "f657bda9",
+      "after": "c0035fd6"
+    },
+    {
+      "offset": "0xe258",
+      "before": "e923b96dfc6f01a9",
+      "after": "00008052c0035fd6"
+    },
+    {
+      "offset": "0x1752c",
+      "before": "eb2bba6d",
+      "after": "fcf90114"
+    },
+    {
+      "offset": "0xcb04",
+      "before": "a0090034",
+      "after": "94240214"
+    },
+    {
+      "offset": "0xed84",
+      "before": "f9440094",
+      "after": "1f190294"
+    },
+    {
+      "offset": "0xf428",
+      "before": "38430094",
+      "after": "9b170294"
+    },
+    {
+      "offset": "0x10e40",
+      "before": "ddf1ff97",
+      "after": "b6110294"
+    },
+    {
+      "offset": "0x13950",
+      "before": "ee310094",
+      "after": "b4070294"
+    },
+    {
+      "offset": "0xd0e4",
+      "before": "00013fd6",
+      "after": "d6220294"
+    },
+    {
+      "offset": "0x111f8",
+      "before": "1f050071",
+      "after": "1f010071"
+    },
+    {
+      "offset": "0x272aa",
+      "before": "e5afbce585a5",
+      "after": "e69bb2e5ba93"
+    },
+    {
+      "offset": "0x260e0",
+      "before": "e58e8be7bca9e58c85e99c80e8a681e4b894e58faae883bde58c85e590abe4b880e4bbbd20736f6e672e6a736f6e20e68896202e61726370726f6a",
+      "after": "e99c80e4b880e4bbbd20736f6e676c6973742e6a736f6e2f2e747874e38081736f6e672e6a736f6e20e68896202e61726370726f6a000000000000"
+    },
+    {
+      "offset": "0x27659",
+      "before": "e6b7bbe58aa0e4bda0e79a84e8b0b1e99da20a0ae58e8be7bca9e58c85e99c80e5b8a6e9bd90efbc9a0ae8b0b1e99da2e4bfa1e681af20736f6e672e6a736f6e202f202e61726370726f6a0a4f474720e99fb3e4b99020626173652e6f67670a31e280933520e5bca020302e61666620e887b320342e6166660ae69bb2e7bb98e4b88ee7bca9e795a5e59bbee4b8a4e5bca0e59bbee78987",
+      "after": "e5afbce585a5e6a0bce5bc8fefbc9a0a736f6e676c6973742e6a736f6e202f20736f6e676c6973742e7478740ae585bce5aeb920736f6e672e6a736f6e202f202e61726370726f6a0a626173652e6f676720e4b88ee69c89e69588204146460a626173652e6a7067202f20313038305f626173652e6a70670ae7bca9e795a5e59bbee887aae58aa8e7949fe6889000000000000000000000"
+    }
+  ],
+  "symbols": {
+    "ltmp0": 606208,
+    "ready": 607021,
+    "failed": 607105,
+    "boot_file": 606967,
+    "report": 606476,
+    "common_mode_address": 607624,
+    "ui_entered": 607331,
+    "ui_file": 607006,
+    "ui_registered": 607391,
+    "ui_no_displaylink": 607484,
+    "ui_no_runloop": 607548,
+    "last_stage": 607616,
+    "window_missing": 607189,
+    "window_found": 607268,
+    "window_file": 606987,
+    "file_manager": 606788,
+    "default_manager": 606802,
+    "urls_for_directory": 606817,
+    "object_at_index": 606845,
+    "path": 606860,
+    "string_class": 606865,
+    "string_from_utf8": 606874,
+    "append_component": 606896,
+    "write_string": 606928,
+    "resign_selector": 608773,
+    "method_type": 608816,
+    "active_selector": 608792,
+    "notification_center": 608704,
+    "default_center": 608725,
+    "will_resign": 608821,
+    "nsstring": 608644,
+    "add_observer": 607872,
+    "did_background": 608863,
+    "did_active": 608907,
+    "add_observer_selector": 608739,
+    "state_address": 609224,
+    "plugin_data_address": 609232,
+    "end_editing": 608948,
+    "remove_superview": 608960,
+    "set_hidden": 608980,
+    "suspended_message": 609122,
+    "lifecycle_file": 609100,
+    "_library_poll": 613680,
+    "preferences": 608592,
+    "partner_key": 609027,
+    "object_for_key": 609054,
+    "integer_value": 609068,
+    "set_integer": 609081,
+    "defaults_class": 608991,
+    "standard_defaults": 609006,
+    "metadata_names": 610908,
+    "normalize_metadata": 611228,
+    "metadata_normalized": 612166,
+    "metadata_parse_failed": 612220,
+    "metadata_shape_failed": 612295,
+    "dict_get": 611032,
+    "dict_set": 611092,
+    "set_object_key": 611879,
+    "is_class": 611168,
+    "is_kind": 611864,
+    "array_class": 611828,
+    "dictionary_class": 611836,
+    "songs_key": 611920,
+    "count_selector": 611897,
+    "difficulties_key": 611926,
+    "mutable_array_class": 611849,
+    "array_selector": 611903,
+    "rating_key": 611939,
+    "add_object_selector": 611909,
+    "jacket_exists": 611716,
+    "jacket_names": 611964,
+    "file_exists_selector": 611946,
+    "import_revision": 612096,
+    "delete_last_component": 612867,
+    "create_directory_selector": 612901,
+    "length_selector": 612860,
+    "cover_fallback_message": 613078,
+    "image_class": 612969,
+    "image_with_data": 612977,
+    "write_data_options_error": 612992,
+    "cover_atomic_retry_message": 613164,
+    "cover_written_message": 613225,
+    "cover_decode_failed_message": 613265,
+    "cover_directory_failed_message": 613334,
+    "cover_write_failed_message": 613386,
+    "log_cover_error_code": 612772,
+    "error_code_selector": 613019,
+    "cover_error_format": 613024,
+    "catalog_reloaded_message": 613592,
+    "ltmp1": 618322,
+    "_action_pause_gate": 609768,
+    "_active": 608100,
+    "_audio_ready": 609308,
+    "_background_path_gate": 613716,
+    "_bootstrap": 606208,
+    "_common_mode": 606264,
+    "_common_mode_data_address": 607624,
+    "_engine_gate": 608172,
+    "_entry_allowed": 609636,
+    "_fresh_ui_kind": 609800,
+    "_hide_partner_lock": 609820,
+    "_import_entry": 612056,
+    "_install_observers": 607724,
+    "_jacket_lookup": 611608,
+    "_last_stage_address": 607616,
+    "_library_open_bridge": 613660,
+    "_metadata_json": 610964,
+    "_metadata_name": 610816,
+    "_native_begin_gate": 610596,
+    "_offline_frame_refresh": 609868,
+    "_overlay_inside": 610644,
+    "_panel_pending_kind": 610520,
+    "_partner_applied": 608300,
+    "_partner_retry": 608328,
+    "_persist_partner": 608484,
+    "_plugin_data_address": 609232,
+    "_refresh_partner_views": 609912,
+    "_register_tick": 607632,
+    "_reload_catalogs": 613436,
+    "_resign": 607920,
+    "_restore_partner": 608356,
+    "_scene_has_pause": 609424,
+    "_snapshot_pause_gate": 609736,
+    "_stable_self_icon": 610704,
+    "_state_address": 609224,
+    "_state_try_read": 609240,
+    "_tick_probe": 606388,
+    "_ui_registered": 606324,
+    "_ui_started": 606280,
+    "_ui_tick_gate": 608116,
+    "_write_pack_cover": 612384
+  },
+  "signing": "unsigned; re-sign complete app and embedded dylib",
+  "scope": [
+    "previous practice/lifecycle/partner fixes retained",
+    "legacy importer action redirected to independent ArcLibrary.dylib; old importArchive entry hard-disabled",
+    "new Android-style catalog model, file picker, ZIP/AFF validation, image normalization and atomic generation commit",
+    "migrate Another songs to base, local IDs, song deletion and move, pack/category CRUD, cover replacement, one-step catalog undo",
+    "shared native catalog resource redirection and engine-thread reload retained",
+    "headless desktop and ARM64 host tests do not prove physical iOS UI or gameplay behavior"
+  ],
+  "new_library_sha256": "e7f4475b58c758700c598d5510a979f844cd2e53643742891a08798890dec856",
+  "legacy_importer_disabled": true,
+  "native_difficulty_repair": {
+    "passed": true,
+    "island_file_offset": 23404544,
+    "island_vm_offset": 23764992,
+    "input_sha256": "4b4d50c50f372c95c47db33b48d20981e15ff314570ed4553c8e16f1dba30812",
+    "output_sha256": "8c0fa13576dac6f9da5fd9f15cb604e89f0d1a16ba2e401b699957ab64537c78",
+    "edits": [
+      {
+        "offset": 23404544,
+        "old": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "new": "011040b9e00308aae00c00b43f100071a80c00543f0c0071830c0054097841f9290c00b4290140f9e90b00b4ea0309aa492940b93f01016b80000054493940b93f01016b61000054e90080522101014ba00a00b43f0c0071830a00543f100071280a0054e00bbea9fd7b01a924000094e803002afd7b41a9e00bc2a848090034097841f9090900b42a0140f9ca0800b4f44fbea9fd7b01a9f30300aa741250393f100071e8179f1a68121039432940b9e00309aa22008052aa03c79760000035741210390b00001469feffd029ed40f9090100b4200940f9c00000b4010280522200805203008052040080523f07d397fd7b41a9f44fc2a8c0035fd669feffd029ed40f9890400b4291140f9490400b42a810091290d40f92c4009110dc48952ad05007180030054690300b43f010aeb200300542b1d40f96b0000b46b696c38eb0200352b0540f90b0100b4e9030baaad050071000200542b0140f92bfeffb4e9030baafbffff17ad050071400100542b0940f90b0100b47f010aebc00000546e0140f9df0109ebe9030baaa0fcff54f6ffff1700008052c0035fd620008052c0035fd6c0035fd6c005c917c0ffffb4a1ffffb482ffffb4097841f949ffffb4290140f909ffffb4f657bba9f44f01a9fd7b02a9e00703a9e22300f94e000094f35343a97500805210000014c0fdffb4a1fdffb482fdffb4097841f949fdffb4290140f909fdffb4f657bba9f44f01a9fd7b02a9e00703a9e22300f940000094f35343a99500805216008052f30300b4b40600b4697a41f9890300b4290140f9490300b4eb2340f96c4d49396d5149396c0000346d02003402000014cd0100352a2940b95f0d0071800000545f110071400000542a3940b9e9030a2a3f0d0071000100543f110071600000546912503989000034bf120071f6179f1a03000014bf0e0071f6179f1ae00314aae103162aa00200b4080040f908a940f900013fd6697a41f9290140f9292940b93f01156be2179f1ae403022ae00313aae10314aae22340f9e303152ae503162a9a000094e00314aae103162a080040f908ad42f900013fd6fd7b42a9f44f41a9f657c5a8c0035fd6ffc307d1a41ac917ff0305d1e21fc917680000b4e8c302f9294ac7172d4ac717f44fb7a9f65701a9fd7b02a9f30300aaf403012af503022a7f000071210100549f0e007180000054f60d0030210c007009000014360a00106108005006000014150080529f0e007160ffff54d60c0030010b0070bf020071c112819ae0c30091e54de097e0230191e10316aae24de097e0830191e10316aadf4de097e00313aae1c30091e2230191e3830191040080527e34e097e81fc1396800f836e01b40f9991eec97e87fc1396800f836e02740f9951eec97e8dfc1396800f836e03340f9911eec97fd7b42a9f65741a9f44fc9a8c0035fd66c61796f7574732f313038302f736f6e6773656c6563742f646966666963756c74795f73656c6563746f725f335f6c6f636b65642e706e67006c61796f7574732f313038302f736f6e6773656c6563742f646966666963756c74795f73656c6563746f725f345f6c6f636b65642e706e67006c61796f7574732f313038302f736f6e6773656c6563742f646966666963756c74795f73656c6563746f725f332e706e67006c61796f7574732f313038302f736f6e6773656c6563742f646966666963756c74795f73656c6563746f725f335f73656c65637465642e706e67006c61796f7574732f313038302f736f6e6773656c6563742f646966666963756c74795f73656c6563746f725f342e706e67006c61796f7574732f313038302f736f6e6773656c6563742f646966666963756c74795f73656c6563746f725f345f73656c65637465642e706e6700f44fb9a9f65701a9f85f02a9fa6703a9fd7b04a9f30300aaf40301aaf50302aaf603032af703042afa03052a3a020034c8420911b86a68381f030071e3179f1ae00314aae103162ae203172a65ffff97e00314aa1f03007108148052e11f80522110881a080040f9083942f900013fd6796a41f9590a00b4df0e007160000054610b003002000014a10a0030e0430191514de097e00319aae1430191080040f9080941f900013fd6f90300aae89fc1396800f836e02b40f90b1eec97190800b45a07003438020034e00315aae103162ac391c697a00100b4e10300aae00319aae203172a03008052240080520526c997e00319aae11f8052080040f9083942f900013fd62e00001461060010e0430191314de097e00319aae1430191080040f9080941f900013fd6f50300aae89fc1396800f836e02b40f9eb1dec97750300b4c1040050e0430191234de097e00315aae14301916186de97e89fc1396800f836e02b40f9e01dec97e00315aa21008052080040f908a940f900013fd6e00319aa21008052080040f908a940f900013fd6e00319aa01148052080040f9083942f900013fd606000014e00319aa01008052080040f908a940f900013fd6fd7b44a9fa6743a9f85f42a9f65741a9f44fc7a8c0035fd66c6162656c002d2d00646966664c6162656c335f6261736500646966664c6162656c345f6261736500000000",
+        "reason": "Bounded native catalog availability guard and repeated-tab routing in unused existing RX space"
+      },
+      {
+        "offset": 9402252,
+        "old": "011040b9",
+        "new": "1dca3614",
+        "reason": "Main difficulty tab callback: repeat ETR or BYD toggles the alternate class"
+      },
+      {
+        "offset": 9402500,
+        "old": "09d0ff17",
+        "new": "f3c93614",
+        "reason": "Existing swap callback shares target-availability guard"
+      },
+      {
+        "offset": 9375140,
+        "old": "ffc307d1",
+        "new": "02e53614",
+        "reason": "Repair BYD visibility/enabled state after every original UI refresh return path"
+      },
+      {
+        "offset": 9380516,
+        "old": "ff0305d1",
+        "new": "d2df3614",
+        "reason": "Repair ETR visibility/enabled state after every original UI refresh return path"
+      },
+      {
+        "offset": 8899532,
+        "old": "e8c302f9",
+        "new": "d6b53814",
+        "reason": "Skip null row before vector append and native retain"
+      }
+    ],
+    "symbols": {
+      "ltmp0": 23764992,
+      "ltmp1": 23767489,
+      "_byd_update": 23765420,
+      "_catalog_owner_page": 23765244,
+      "_difficulty_guard": 23765072,
+      "_difficulty_has_chart": 23765244,
+      "_difficulty_presentation": 23766356,
+      "_difficulty_tab": 23764992,
+      "_difficulty_textures": 23765812,
+      "_etr_update": 23765484,
+      "_song_row_nonnull": 23765796,
+      "_sound_owner_page": 23765192
+    },
+    "scope": "Verified callbacks and post-refresh tab states; force native list re-filtering instead of activating the the missing difficulty of the current row. No new UI overlay, placeholder AFF, fabricated chart difficulty or per-frame catalog scan."
+  },
+  "preserved_entries": 10296,
+  "removed_song_entries": 0,
+  "sayonara_only": false,
+  "catalogs_changed": [
+    "Payload/Arc-mobile.app/Arc-mobile"
+  ],
+  "unchanged_info_plist_other_frameworks": true,
+  "ipa_sha256": "8b402c95beb2be252cea57329ee315c2e71a3eb3b7fe241456e073056c1633d4",
+  "ipa_bytes": 3800720255,
+  "zip_crc": "passed"
+}

@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "checks": 21,
+  "scope": "Real ARM64 overlay hit tests, begin-side pause hide, snapshot and UI close path.\nUIKit rectangles, button factories, native calls and label formatting are synthetic; not an iOS device test.\n",
+  "cases": [
+    {
+      "test": "real_import_entry_and_modal_hit_route_reproduces_r5_failure",
+      "slide": "0x1000000",
+      "build": "r6"
+    },
+    {
+      "test": "full_practice_action_builds_controls_and_returns",
+      "slide": "0x1000000",
+      "registered_control_actions": 3
+    },
+    {
+      "test": "entry_routes_to_new_library_without_legacy_modal",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "practice_rect_and_full_panel_hit_regions_survive_import_fallthrough",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "full_snapshot_with_visible_pause_and_legacy_modal_hint",
+      "slide": "0x1000000",
+      "build": "r6",
+      "kind": 2
+    },
+    {
+      "test": "real_begin_hide_snapshot_and_next_UI_tick_reproduces_r5_panel_disappearance",
+      "slide": "0x1000000",
+      "build": "r6",
+      "panel_retained": true
+    },
+    {
+      "test": "matching_completion_still_closes_panel",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "real_import_entry_and_modal_hit_route_reproduces_r5_failure",
+      "slide": "0x123000000",
+      "build": "r6"
+    },
+    {
+      "test": "full_practice_action_builds_controls_and_returns",
+      "slide": "0x123000000",
+      "registered_control_actions": 3
+    },
+    {
+      "test": "entry_routes_to_new_library_without_legacy_modal",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "practice_rect_and_full_panel_hit_regions_survive_import_fallthrough",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "full_snapshot_with_visible_pause_and_legacy_modal_hint",
+      "slide": "0x123000000",
+      "build": "r6",
+      "kind": 2
+    },
+    {
+      "test": "real_begin_hide_snapshot_and_next_UI_tick_reproduces_r5_panel_disappearance",
+      "slide": "0x123000000",
+      "build": "r6",
+      "panel_retained": true
+    },
+    {
+      "test": "matching_completion_still_closes_panel",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "real_import_entry_and_modal_hit_route_reproduces_r5_failure",
+      "slide": "0x700000000",
+      "build": "r6"
+    },
+    {
+      "test": "full_practice_action_builds_controls_and_returns",
+      "slide": "0x700000000",
+      "registered_control_actions": 3
+    },
+    {
+      "test": "entry_routes_to_new_library_without_legacy_modal",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "practice_rect_and_full_panel_hit_regions_survive_import_fallthrough",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "full_snapshot_with_visible_pause_and_legacy_modal_hint",
+      "slide": "0x700000000",
+      "build": "r6",
+      "kind": 2
+    },
+    {
+      "test": "real_begin_hide_snapshot_and_next_UI_tick_reproduces_r5_panel_disappearance",
+      "slide": "0x700000000",
+      "build": "r6",
+      "panel_retained": true
+    },
+    {
+      "test": "matching_completion_still_closes_panel",
+      "slide": "0x700000000"
+    }
+  ]
+}

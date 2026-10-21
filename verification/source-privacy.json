@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "method": "explicit source whitelist and secret/personal identifier pattern scan",
+  "no_original_game_fonts_sample_archive_device_logs_or_signing_material": true,
+  "scope": "A pattern scan is not proof of absence of every possible secret."
+}

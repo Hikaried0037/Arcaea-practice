@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "checks": 21,
+  "cases": [
+    "import_cancel_unlocks",
+    "import_failure_unlocks_and_reports",
+    "preview_cancel_does_not_commit",
+    "confirm_import_writes_actual_class_and_metadata_to_base",
+    "cover_cancel_route",
+    "cover_success_commits_filename",
+    "delete_song_cancel_retains_song",
+    "delete_song_confirm",
+    "undo_latest_catalog_change",
+    "create_category",
+    "create_pack_in_selected_category",
+    "move_pack_category",
+    "delete_pack_preserving_songs",
+    "delete_category",
+    "move_song_dialog_and_commit",
+    "search_existing_songs",
+    "refresh_catalog",
+    "return_to_game_message",
+    "reload_message",
+    "background_only_repair_posts_stage_and_does_not_commit_duplicate_song",
+    "no_uncaught_Javascript_errors"
+  ],
+  "scope": "Desktop Edge real DOM actions, simulated native bridge; not iPad UIKit or gameplay."
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": 9,
+  "cases": [
+    "canonical_1920x1440_JPEG_bit_identical_no_crop",
+    "noncanonical_(1920, 1080)_fills_native_canvas",
+    "noncanonical_(2560, 1440)_fills_native_canvas",
+    "noncanonical_(1440, 1920)_fills_native_canvas",
+    "noncanonical_(1024, 768)_fills_native_canvas",
+    "old_private_1080_background_normalized_once_backup_retained_catalog_unchanged",
+    "duplicate_archive_restores_original_full_image_without_duplicate_song_and_then_blocks_repeat",
+    "builtin_named_background_excluded_from_migration",
+    "source_restoration_write_failure_retry_and_marker_order"
+  ],
+  "scope": "Native 1920x1440 background preservation, legacy normalization and source-only restoration. UIKit pixel rendering is modeled, dimensions and control flow execute under ARM64.",
+  "library_sha256": "e7f4475b58c758700c598d5510a979f844cd2e53643742891a08798890dec856"
+}

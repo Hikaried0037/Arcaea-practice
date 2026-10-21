@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "scope": "Mach-O structure, file bounds, original symbols/sections/init array, decoded dyld fixups; not a real dyld/code-signing run",
+  "segments": [
+    {
+      "command": "0x19",
+      "size": 472,
+      "file_offset": 32,
+      "segment": "__TEXT",
+      "vmaddr": 0,
+      "vmsize": 163840,
+      "fileoff": 0,
+      "filesize": 163840
+    },
+    {
+      "command": "0x19",
+      "size": 632,
+      "file_offset": 504,
+      "segment": "__DATA",
+      "vmaddr": 163840,
+      "vmsize": 442368,
+      "fileoff": 163840,
+      "filesize": 442368
+    },
+    {
+      "command": "0x19",
+      "size": 152,
+      "file_offset": 1136,
+      "segment": "__PRACFIX",
+      "vmaddr": 606208,
+      "vmsize": 16384,
+      "fileoff": 606208,
+      "filesize": 16384
+    },
+    {
+      "command": "0x19",
+      "size": 72,
+      "file_offset": 1288,
+      "segment": "__LINKEDIT",
+      "vmaddr": 622592,
+      "vmsize": 65536,
+      "fileoff": 622592,
+      "filesize": 49168
+    }
+  ],
+  "dyld_target_counts": {
+    "rebase": 2984,
+    "bind": 15,
+    "weak_bind": 0,
+    "lazy_bind": 55
+  },
+  "sha256": "122999af2c334a6c27ba33966d3fe33ec56ae345fc89708956d5e006e7e64d3b"
+}

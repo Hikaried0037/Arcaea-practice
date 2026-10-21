@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": 6,
+  "cases": [
+    "segments_and_file_bounds",
+    "all_rebases_and_bind_slots_match_link_manifest",
+    "dispatch_main_queue_uses_exported_object_not_inline_C_helper",
+    "every_relocation_decodes_to_expected_target",
+    "export_trie_open_and_reload_match_symbols",
+    "only_plugin_entry_and_reload_are_exported"
+  ],
+  "relocation_count": 3588,
+  "bind_count": 31,
+  "rebase_count": 22,
+  "scope": "Inspect every emitted ARM64 relocation, dyld bind, rebase and export address. Not an iOS dyld or code-signature execution."
+}

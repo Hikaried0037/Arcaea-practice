@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "checks": 2,
+  "scope": "Regression for the device-reported r12 dyld LINKEDIT alignment rejection.\nStatic validation only; does not execute Apple's dyld or code signing.\n",
+  "r12_reproduced_errors": [
+    {
+      "name": "bind opcodes",
+      "offset": 49247,
+      "reason": "alignment",
+      "required": 8
+    },
+    {
+      "name": "export trie",
+      "offset": 50092,
+      "reason": "alignment",
+      "required": 8
+    }
+  ],
+  "current_contents": [
+    {
+      "name": "rebase opcodes",
+      "offset": 65536,
+      "size": 111,
+      "alignment": 8
+    },
+    {
+      "name": "bind opcodes",
+      "offset": 65648,
+      "size": 845,
+      "alignment": 8
+    },
+    {
+      "name": "export trie",
+      "offset": 66496,
+      "size": 57,
+      "alignment": 8
+    },
+    {
+      "name": "symbol table",
+      "offset": 66560,
+      "size": 6736,
+      "alignment": 8
+    },
+    {
+      "name": "string table",
+      "offset": 73296,
+      "size": 4580,
+      "alignment": 8
+    }
+  ],
+  "library_sha256": "e7f4475b58c758700c598d5510a979f844cd2e53643742891a08798890dec856"
+}

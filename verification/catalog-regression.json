@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": 24,
+  "cases": [
+    "import_defaults_to_arcaea_and_preserves_metadata",
+    "same_chart_rejected_even_with_distinct_local_id_archive_name_or_metadata",
+    "existing_duplicate_chart_sets_archived_without_resource_deletion",
+    "missing_chart_designer_remains_blank",
+    "songlist_single_song_wrapper",
+    "single_song_array",
+    "missing_bg_rejected",
+    "difficulty_bg_rejected",
+    "multiple_songs_rejected",
+    "traversal_id_rejected",
+    "invalid_class_rejected",
+    "duplicate_class_rejected",
+    "migrate_existing_another_to_base_without_data_loss",
+    "custom_section_and_pack_creation",
+    "delete_song_and_restore_snapshot",
+    "delete_pack_keep_songs_and_child_packs",
+    "delete_pack_with_songs",
+    "move_song_between_packs",
+    "move_pack_and_children",
+    "delete_section_keep_packs",
+    "delete_section_with_packs_and_songs",
+    "default_import_pack_and_section_cannot_be_deleted",
+    "duplicate_and_unsafe_catalog_ids_rejected",
+    "pretty_four_space_json_roundtrip"
+  ]
+}

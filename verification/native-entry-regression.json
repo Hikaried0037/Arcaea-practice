@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "checks": 12,
+  "scope": "Real native initialization guards executed with supplied game segments; final import/effects module installation calls mocked, not a full gameplay test",
+  "cases": [
+    {
+      "slide": "0x1000000",
+      "mutation": null,
+      "accepted": true,
+      "downstream_modules_reached": [
+        "0xc250",
+        "0xb3bc"
+      ]
+    },
+    {
+      "slide": "0x1000000",
+      "mutation": "signature",
+      "accepted": false,
+      "downstream_modules_reached": []
+    },
+    {
+      "slide": "0x1000000",
+      "mutation": "hook",
+      "accepted": false,
+      "downstream_modules_reached": []
+    },
+    {
+      "slide": "0x1000000",
+      "mutation": "uuid",
+      "accepted": false,
+      "downstream_modules_reached": []
+    },
+    {
+      "slide": "0x123000000",
+      "mutation": null,
+      "accepted": true,
+      "downstream_modules_reached": [
+        "0xc250",
+        "0xb3bc"
+      ]
+    },
+    {
+      "slide": "0x123000000",
+      "mutation": "signature",
+      "accepted": false,
+      "downstream_modules_reached": []
+    },
+    {
+      "slide": "0x123000000",
+      "mutation": "hook",
+      "accepted": false,
+      "downstream_modules_reached": []
+    },
+    {
+      "slide": "0x123000000",
+      "mutation": "uuid",
+      "accepted": false,
+      "downstream_modules_reached": []
+    },
+    {
+      "slide": "0x700000000",
+      "mutation": null,
+      "accepted": true,
+      "downstream_modules_reached": [
+        "0xc250",
+        "0xb3bc"
+      ]
+    },
+    {
+      "slide": "0x700000000",
+      "mutation": "signature",
+      "accepted": false,
+      "downstream_modules_reached": []
+    },
+    {
+      "slide": "0x700000000",
+      "mutation": "hook",
+      "accepted": false,
+      "downstream_modules_reached": []
+    },
+    {
+      "slide": "0x700000000",
+      "mutation": "uuid",
+      "accepted": false,
+      "downstream_modules_reached": []
+    }
+  ]
+}

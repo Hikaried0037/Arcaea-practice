@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": 5,
+  "cases": [
+    "native_snapshot_hashes_actual_existing_AFF",
+    "JS_merges_only_complete_identical_local_hash_sets",
+    "metadata_archived_distinct_chart_kept",
+    "native_commit_and_cold_master_match_clean_catalog",
+    "all_original_AFF_resources_and_undo_preserved"
+  ],
+  "scope": "Compiled snapshot resource hashes through production JS legacy-duplicate migration and native commit."
+}

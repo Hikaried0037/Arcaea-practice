@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "checks": 30,
+  "scope": "Execute r5 ARM64 entry, native portrait/UserCell refresh, editor removal and\nlock opacity control flow. UIKit, rendering and native asset loading are mocked.\n",
+  "cases": [
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x1000000",
+      "cached_kind": 0
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x1000000",
+      "cached_kind": 1
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x1000000",
+      "cached_kind": 2
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x1000000",
+      "cached_kind": 3
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x1000000",
+      "cached_kind": 4294967295
+    },
+    {
+      "test": "pending_panel_and_begin_use_actual_menu_without_relaxing_normal_play_guard",
+      "slide": "0x1000000",
+      "attached": false
+    },
+    {
+      "test": "pending_panel_and_begin_use_actual_menu_without_relaxing_normal_play_guard",
+      "slide": "0x1000000",
+      "attached": true
+    },
+    {
+      "test": "restore_refreshes_portrait_and_self_avatar_once_per_selection_or_form",
+      "slide": "0x1000000",
+      "other_profiles_untouched": true
+    },
+    {
+      "test": "native_card_visibility_reset_cannot_reveal_zero_opacity_lock",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "four_editor_buttons_never_created_and_no_editor_hit_area_or_action",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x123000000",
+      "cached_kind": 0
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x123000000",
+      "cached_kind": 1
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x123000000",
+      "cached_kind": 2
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x123000000",
+      "cached_kind": 3
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x123000000",
+      "cached_kind": 4294967295
+    },
+    {
+      "test": "pending_panel_and_begin_use_actual_menu_without_relaxing_normal_play_guard",
+      "slide": "0x123000000",
+      "attached": false
+    },
+    {
+      "test": "pending_panel_and_begin_use_actual_menu_without_relaxing_normal_play_guard",
+      "slide": "0x123000000",
+      "attached": true
+    },
+    {
+      "test": "restore_refreshes_portrait_and_self_avatar_once_per_selection_or_form",
+      "slide": "0x123000000",
+      "other_profiles_untouched": true
+    },
+    {
+      "test": "native_card_visibility_reset_cannot_reveal_zero_opacity_lock",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "four_editor_buttons_never_created_and_no_editor_hit_area_or_action",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x700000000",
+      "cached_kind": 0
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x700000000",
+      "cached_kind": 1
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x700000000",
+      "cached_kind": 2
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x700000000",
+      "cached_kind": 3
+    },
+    {
+      "test": "real_action_allocates_attaches_panel_and_queues_begin_despite_stale_kind",
+      "slide": "0x700000000",
+      "cached_kind": 4294967295
+    },
+    {
+      "test": "pending_panel_and_begin_use_actual_menu_without_relaxing_normal_play_guard",
+      "slide": "0x700000000",
+      "attached": false
+    },
+    {
+      "test": "pending_panel_and_begin_use_actual_menu_without_relaxing_normal_play_guard",
+      "slide": "0x700000000",
+      "attached": true
+    },
+    {
+      "test": "restore_refreshes_portrait_and_self_avatar_once_per_selection_or_form",
+      "slide": "0x700000000",
+      "other_profiles_untouched": true
+    },
+    {
+      "test": "native_card_visibility_reset_cannot_reveal_zero_opacity_lock",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "four_editor_buttons_never_created_and_no_editor_hit_area_or_action",
+      "slide": "0x700000000"
+    }
+  ]
+}

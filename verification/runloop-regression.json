@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "checks": 15,
+  "scope": "Real ARM64 UI initialization/tick callers with synthetic Objective-C/runtime methods; button factories are mocked. CoreFoundation sentinel registration semantics explicitly modeled. Not an iOS or UIKit test.",
+  "primary_reference": "https://github.com/opensource-apple/CF/blob/master/CFRunLoop.c",
+  "cases": [
+    {
+      "test": "real_UI_initializer_and_mode_contract",
+      "slide": "0x1000000",
+      "build": "original",
+      "registration": {
+        "mode": "kCFRunLoopCommonModes",
+        "system_sentinel": false,
+        "runloop": true,
+        "displaylink": true,
+        "fires": false
+      },
+      "practice_and_import_factory_calls": 0
+    },
+    {
+      "test": "real_UI_initializer_and_mode_contract",
+      "slide": "0x1000000",
+      "build": "fixed",
+      "registration": {
+        "mode": "kCFRunLoopCommonModes",
+        "system_sentinel": true,
+        "runloop": true,
+        "displaylink": true,
+        "fires": true
+      },
+      "practice_and_import_factory_calls": 2
+    },
+    {
+      "test": "registration_failure_diagnostic",
+      "slide": "0x1000000",
+      "missing": "runloop",
+      "passed": true
+    },
+    {
+      "test": "registration_failure_diagnostic",
+      "slide": "0x1000000",
+      "missing": "displaylink",
+      "passed": true
+    },
+    {
+      "test": "no_global_FPS_override",
+      "slide": "0x1000000",
+      "passed": true
+    },
+    {
+      "test": "real_UI_initializer_and_mode_contract",
+      "slide": "0x123000000",
+      "build": "original",
+      "registration": {
+        "mode": "kCFRunLoopCommonModes",
+        "system_sentinel": false,
+        "runloop": true,
+        "displaylink": true,
+        "fires": false
+      },
+      "practice_and_import_factory_calls": 0
+    },
+    {
+      "test": "real_UI_initializer_and_mode_contract",
+      "slide": "0x123000000",
+      "build": "fixed",
+      "registration": {
+        "mode": "kCFRunLoopCommonModes",
+        "system_sentinel": true,
+        "runloop": true,
+        "displaylink": true,
+        "fires": true
+      },
+      "practice_and_import_factory_calls": 2
+    },
+    {
+      "test": "registration_failure_diagnostic",
+      "slide": "0x123000000",
+      "missing": "runloop",
+      "passed": true
+    },
+    {
+      "test": "registration_failure_diagnostic",
+      "slide": "0x123000000",
+      "missing": "displaylink",
+      "passed": true
+    },
+    {
+      "test": "no_global_FPS_override",
+      "slide": "0x123000000",
+      "passed": true
+    },
+    {
+      "test": "real_UI_initializer_and_mode_contract",
+      "slide": "0x700000000",
+      "build": "original",
+      "registration": {
+        "mode": "kCFRunLoopCommonModes",
+        "system_sentinel": false,
+        "runloop": true,
+        "displaylink": true,
+        "fires": false
+      },
+      "practice_and_import_factory_calls": 0
+    },
+    {
+      "test": "real_UI_initializer_and_mode_contract",
+      "slide": "0x700000000",
+      "build": "fixed",
+      "registration": {
+        "mode": "kCFRunLoopCommonModes",
+        "system_sentinel": true,
+        "runloop": true,
+        "displaylink": true,
+        "fires": true
+      },
+      "practice_and_import_factory_calls": 2
+    },
+    {
+      "test": "registration_failure_diagnostic",
+      "slide": "0x700000000",
+      "missing": "runloop",
+      "passed": true
+    },
+    {
+      "test": "registration_failure_diagnostic",
+      "slide": "0x700000000",
+      "missing": "displaylink",
+      "passed": true
+    },
+    {
+      "test": "no_global_FPS_override",
+      "slide": "0x700000000",
+      "passed": true
+    }
+  ]
+}

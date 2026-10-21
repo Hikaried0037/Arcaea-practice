@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "checks": 18,
+  "cases": [
+    "new_background_prepared_without_writing_active_library",
+    "committed_both_resolution_aliases_and_actual_native_fullPath_reads_them",
+    "native_resolver_missing_unsafe_unrelated_short_names_fall_back",
+    "native_song_resource_route_preserved",
+    "png_converted_for_native_JPG_background_request",
+    "jpeg_converted_for_native_JPG_background_request",
+    "builtin_background_wins_without_overwrite_or_custom_validation",
+    "previously_imported_background_reused_without_archive_image",
+    "missing_background_rejected_without_active_catalog_change",
+    "corrupt_background_rejected_without_active_catalog_change",
+    "oversized_background_rejected_without_active_catalog_change",
+    "unsafe_background_rejected_without_active_catalog_change",
+    "song_inverse_and_actual_difficulty_backgrounds_included_inactive_placeholders_ignored",
+    "missing_staged_background_commit_keeps_previous_active_catalog",
+    "write_failure_background_commit_keeps_previous_active_catalog",
+    "write_failure_retry_writes_complete_background_aliases",
+    "generic_alias_failure_background_commit_keeps_previous_active_catalog",
+    "generic_alias_failure_retry_writes_complete_background_aliases"
+  ],
+  "library_sha256": "e7f4475b58c758700c598d5510a979f844cd2e53643742891a08798890dec856",
+  "scope": "Actual ARM64 background prepare/commit and retained native fullPath resolver. Foundation/filesystem/UIKit rendering and C++ result construction are host models, not iOS execution."
+}

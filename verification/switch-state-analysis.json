@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "source": "User supplied r16 recording; private file-provider and account details omitted",
+  "observed": "ETR/BYD switches may fail and stop responding after switching back",
+  "causes": [
+    "Other native UI refresh exits can re-hide or disable alternative difficulty tabs",
+    "Selected row difficulty and global filter may differ",
+    "Original click handler may activate or reject the selected row rather than force re-filtering"
+  ],
+  "changes": [
+    "Post-refresh native visibility/enabled normalization for both alternative tabs",
+    "Toggle using current row OR active filter",
+    "Use native list rebuild with force=1 for class 3/4",
+    "Restore remembered mode on failed rebuild and retain native click feedback"
+  ],
+  "retained_r16_safety": [
+    "Correct VM versus file offset",
+    "Actual segment permissions in emulator",
+    "r15 instruction fetch protection regression"
+  ],
+  "physical_r17_validation": "Pending user iPad testing",
+  "scope": "Host state-flow tests substitute original drawing and list rebuild; do not prove iPad rendering or filtering."
+}

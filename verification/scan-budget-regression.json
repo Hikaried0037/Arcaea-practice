@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "checks": 9,
+  "scope": "Real ARM64 scan cooldown instructions; not a performance benchmark or proof of actual loading-frame smoothness",
+  "cases": [
+    {
+      "slide": "0x1000000",
+      "synthetic_frame_hz": 60,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 92,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    },
+    {
+      "slide": "0x1000000",
+      "synthetic_frame_hz": 120,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 95,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    },
+    {
+      "slide": "0x1000000",
+      "synthetic_frame_hz": 144,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 96,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    },
+    {
+      "slide": "0x123000000",
+      "synthetic_frame_hz": 60,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 92,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    },
+    {
+      "slide": "0x123000000",
+      "synthetic_frame_hz": 120,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 95,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    },
+    {
+      "slide": "0x123000000",
+      "synthetic_frame_hz": 144,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 96,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    },
+    {
+      "slide": "0x700000000",
+      "synthetic_frame_hz": 60,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 92,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    },
+    {
+      "slide": "0x700000000",
+      "synthetic_frame_hz": 120,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 95,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    },
+    {
+      "slide": "0x700000000",
+      "synthetic_frame_hz": 144,
+      "duration_seconds": 10,
+      "scan_entries": {
+        "original": 96,
+        "fixed": 40
+      },
+      "scene_change_immediate": true
+    }
+  ]
+}

@@ -1,0 +1,2809 @@
+{
+  "passed": true,
+  "checks": 243,
+  "scope": "ARM64 regressions for detached native pause menus and suspended mixers.\nRuntime/virtual parent methods are synthetic. One test executes the game's real\nFMOD-backend update instructions with FMOD and logging calls mocked.\n",
+  "cases": [
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x1000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": true
+    },
+    {
+      "test": "parent_cycle",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "foreign_parent",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "hidden_ancestor",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "already_open_panel",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "wrong_audio_backend",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "hidden_scene",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "not_running_scene",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "detached_running_visible_node_rejected",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x1000000",
+      "suspended": 0,
+      "ready": 0,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x1000000",
+      "suspended": 0,
+      "ready": 0,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x1000000",
+      "suspended": 0,
+      "ready": 1,
+      "recovering": 0,
+      "plugin_frame": true
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x1000000",
+      "suspended": 0,
+      "ready": 1,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x1000000",
+      "suspended": 1,
+      "ready": 0,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x1000000",
+      "suspended": 1,
+      "ready": 0,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x1000000",
+      "suspended": 1,
+      "ready": 1,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x1000000",
+      "suspended": 1,
+      "ready": 1,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "actual_game_backend_resume_runs_before_plugin_cancel",
+      "slide": "0x1000000",
+      "FMOD_calls": "mocked",
+      "native_backend_instructions": "real"
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x123000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": true
+    },
+    {
+      "test": "parent_cycle",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "foreign_parent",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "hidden_ancestor",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "already_open_panel",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "wrong_audio_backend",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "hidden_scene",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "not_running_scene",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "detached_running_visible_node_rejected",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x123000000",
+      "suspended": 0,
+      "ready": 0,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x123000000",
+      "suspended": 0,
+      "ready": 0,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x123000000",
+      "suspended": 0,
+      "ready": 1,
+      "recovering": 0,
+      "plugin_frame": true
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x123000000",
+      "suspended": 0,
+      "ready": 1,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x123000000",
+      "suspended": 1,
+      "ready": 0,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x123000000",
+      "suspended": 1,
+      "ready": 0,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x123000000",
+      "suspended": 1,
+      "ready": 1,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x123000000",
+      "suspended": 1,
+      "ready": 1,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "actual_game_backend_resume_runs_before_plugin_cancel",
+      "slide": "0x123000000",
+      "FMOD_calls": "mocked",
+      "native_backend_instructions": "real"
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "allowed": false
+    },
+    {
+      "test": "real_pause_attachment_required_for_snapshot_entry_and_click",
+      "slide": "0x700000000",
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "allowed": true
+    },
+    {
+      "test": "parent_cycle",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "foreign_parent",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "hidden_ancestor",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "already_open_panel",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "wrong_audio_backend",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "hidden_scene",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "not_running_scene",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "detached_running_visible_node_rejected",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x700000000",
+      "suspended": 0,
+      "ready": 0,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x700000000",
+      "suspended": 0,
+      "ready": 0,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x700000000",
+      "suspended": 0,
+      "ready": 1,
+      "recovering": 0,
+      "plugin_frame": true
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x700000000",
+      "suspended": 0,
+      "ready": 1,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x700000000",
+      "suspended": 1,
+      "ready": 0,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x700000000",
+      "suspended": 1,
+      "ready": 0,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x700000000",
+      "suspended": 1,
+      "ready": 1,
+      "recovering": 0,
+      "plugin_frame": false
+    },
+    {
+      "test": "pending_cancel_waits_for_original_backend_resume",
+      "slide": "0x700000000",
+      "suspended": 1,
+      "ready": 1,
+      "recovering": 1,
+      "plugin_frame": false
+    },
+    {
+      "test": "actual_game_backend_resume_runs_before_plugin_cancel",
+      "slide": "0x700000000",
+      "FMOD_calls": "mocked",
+      "native_backend_instructions": "real"
+    }
+  ]
+}

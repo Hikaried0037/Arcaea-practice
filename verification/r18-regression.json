@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "checks": 25,
+  "cases": [
+    "compiled_SHA256_0",
+    "compiled_SHA256_1",
+    "compiled_SHA256_3",
+    "compiled_SHA256_55",
+    "compiled_SHA256_56",
+    "compiled_SHA256_63",
+    "compiled_SHA256_64",
+    "compiled_SHA256_65",
+    "compiled_SHA256_127",
+    "compiled_SHA256_128",
+    "compiled_SHA256_129",
+    "compiled_SHA256_255",
+    "compiled_SHA256_1000",
+    "compiled_SHA256_4096",
+    "original_null_row_retain_crash_reproduced",
+    "fixed_null_rows_filtered_order_and_real_retain_1",
+    "fixed_null_rows_filtered_order_and_real_retain_2",
+    "fixed_null_rows_filtered_order_and_real_retain_1",
+    "fixed_null_rows_filtered_order_and_real_retain_6",
+    "native_official_texture_class_3_selected_0",
+    "native_official_texture_class_3_selected_1",
+    "native_official_texture_class_4_selected_0",
+    "native_official_texture_class_4_selected_1",
+    "BYD_actual_row_overrides_stale_ETR_filter_for_visible_texture",
+    "all_four_official_resources_exist_in_host"
+  ],
+  "scope": "Actual compiled SHA256 and native null-row filtering; framework vector append is a host substitute."
+}

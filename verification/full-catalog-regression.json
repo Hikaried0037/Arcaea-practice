@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": 7,
+  "bundled_songs": 562,
+  "bundled_packs": 63,
+  "manager_virtual_memory_archive": 1,
+  "cases": [
+    "compiled_merge_restores_all_bundled_songs_and_packs",
+    "original_private_catalog_backed_up",
+    "production_JS_accepts_reserved_Memory_Archive_without_native_duplicate_pack",
+    "compiled_commit_and_cold_master_match",
+    "imported_ID_and_resource_preserved",
+    "presentation_indexes_unique",
+    "one_time_marker_preserves_future_deletion"
+  ],
+  "scope": "Full bundled catalog restored into single-song private catalog. Actual compiled merge/commit and production JS; framework/filesystem are host models.",
+  "library_sha256": "e7f4475b58c758700c598d5510a979f844cd2e53643742891a08798890dec856"
+}

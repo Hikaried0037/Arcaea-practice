@@ -1,0 +1,289 @@
+{
+  "passed": true,
+  "checks": 57,
+  "scope": "Execute r4 ARM64 control flow with synthetic Objective-C/native contracts.\nNot UIKit, dyld, device suspension, signing, audio playback, or an FPS test.\n",
+  "cases": [
+    {
+      "test": "real_initializer_registers_lifecycle_methods_and_notifications",
+      "slide": "0x1000000"
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x1000000",
+      "cycle": 0
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x1000000",
+      "cycle": 1
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x1000000",
+      "cycle": 2
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x1000000",
+      "cycle": 3
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x1000000",
+      "cycle": 4
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x1000000",
+      "cycle": 5
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x1000000",
+      "cycle": 6
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x1000000",
+      "cycle": 7
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x1000000",
+      "index": 0
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x1000000",
+      "index": 1
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x1000000",
+      "index": 23
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x1000000",
+      "index": 64
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x1000000",
+      "index": 128
+    },
+    {
+      "test": "snapshot_busy_returns_without_spinning_or_partial_copy",
+      "slide": "0x1000000",
+      "locked": false
+    },
+    {
+      "test": "snapshot_busy_returns_without_spinning_or_partial_copy",
+      "slide": "0x1000000",
+      "locked": true
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x1000000",
+      "value": -1
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x1000000",
+      "value": 129
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x1000000",
+      "value": 100000
+    },
+    {
+      "test": "real_initializer_registers_lifecycle_methods_and_notifications",
+      "slide": "0x123000000"
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x123000000",
+      "cycle": 0
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x123000000",
+      "cycle": 1
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x123000000",
+      "cycle": 2
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x123000000",
+      "cycle": 3
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x123000000",
+      "cycle": 4
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x123000000",
+      "cycle": 5
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x123000000",
+      "cycle": 6
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x123000000",
+      "cycle": 7
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x123000000",
+      "index": 0
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x123000000",
+      "index": 1
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x123000000",
+      "index": 23
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x123000000",
+      "index": 64
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x123000000",
+      "index": 128
+    },
+    {
+      "test": "snapshot_busy_returns_without_spinning_or_partial_copy",
+      "slide": "0x123000000",
+      "locked": false
+    },
+    {
+      "test": "snapshot_busy_returns_without_spinning_or_partial_copy",
+      "slide": "0x123000000",
+      "locked": true
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x123000000",
+      "value": -1
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x123000000",
+      "value": 129
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x123000000",
+      "value": 100000
+    },
+    {
+      "test": "real_initializer_registers_lifecycle_methods_and_notifications",
+      "slide": "0x700000000"
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x700000000",
+      "cycle": 0
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x700000000",
+      "cycle": 1
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x700000000",
+      "cycle": 2
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x700000000",
+      "cycle": 3
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x700000000",
+      "cycle": 4
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x700000000",
+      "cycle": 5
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x700000000",
+      "cycle": 6
+    },
+    {
+      "test": "resign_detach_inactive_skip_and_deferred_foreground_cancel",
+      "slide": "0x700000000",
+      "cycle": 7
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x700000000",
+      "index": 0
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x700000000",
+      "index": 1
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x700000000",
+      "index": 23
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x700000000",
+      "index": 64
+    },
+    {
+      "test": "partner_success_persists_restart_and_retry",
+      "slide": "0x700000000",
+      "index": 128
+    },
+    {
+      "test": "snapshot_busy_returns_without_spinning_or_partial_copy",
+      "slide": "0x700000000",
+      "locked": false
+    },
+    {
+      "test": "snapshot_busy_returns_without_spinning_or_partial_copy",
+      "slide": "0x700000000",
+      "locked": true
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x700000000",
+      "value": -1
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x700000000",
+      "value": 129
+    },
+    {
+      "test": "invalid_preference_ignored",
+      "slide": "0x700000000",
+      "value": 100000
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "files": 82,
+  "production_files_identical_to_r22": [
+    "archive.c",
+    "archive.h",
+    "library.c",
+    "diagnostics.s",
+    "difficulty.s",
+    "patch_ios.py",
+    "patch_difficulty.py",
+    "build_library.py",
+    "link_library.py",
+    "catalog.js",
+    "ui.js",
+    "index.html",
+    "library.css"
+  ],
+  "source_adaptations": [
+    "full-catalog README command corrected",
+    "historical binary tests optional with explicit skips",
+    "ORIGINAL_IPA environment override in catalog/resource tests",
+    "standalone rebuild/current-test runner and branch documentation"
+  ],
+  "private_materials_excluded": [
+    "original game and fonts",
+    "IPA and APK",
+    "signing keys and provisioning",
+    "personal recordings and device logs",
+    "private sample archives"
+  ],
+  "method": "Explicit export whitelist, UTF-8 decode, secret and personal path pattern scan; not proof of absence of every possible secret."
+}
