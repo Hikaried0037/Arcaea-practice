@@ -1,0 +1,16 @@
+{
+  "result": "passed",
+  "variants": {
+    "shell": {
+      "cases": 1050,
+      "normal_native_event_preserved": true,
+      "original_native_interpolation": true
+    },
+    "full": {
+      "cases": 1050,
+      "normal_native_event_preserved": true,
+      "original_native_interpolation": true
+    }
+  },
+  "limits": "Native generic 6K evaluator executed; scene/GPU and full named-song transition excluded"
+}

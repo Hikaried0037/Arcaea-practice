@@ -36,12 +36,15 @@ def exercise(plugin,game,profile,expect_smooth=True):
  setvar('_ZL5scene',scene);setvar('_ZL4base',0);setvar('_ZL13clockOriginal',clock_fn);setvar('_ZL15calibratedClock',clock);setvar('_ZL7enabled',1,'<I')
  reverse={v:k for k,v in imports.items()};now=[8000];starts=[0]
  queries=[0];music=[0];fake_position=0x7101f000
+ music_filter=symbols.get('_ZN10audioCacheL12musicChannelEPv')
  uc.mem_write(0x60004000+0x2c0,struct.pack('<Q',0x60008000))
  uc.mem_write(0x60008038,struct.pack('<QQ',0x60008400,0x60008410))
  uc.mem_write(0x60008400,struct.pack('<QQ',0x60009000,0x60009100))
  setvar('_ZL16getMusicPosition',fake_position)
  def callback(uc,address,size,user):
-  if address==fake_position:
+  if music_filter is not None and address==music_filter:
+   uc.reg_write(UC_ARM64_REG_W0,1) # fixture is the current gameplay music voice
+  elif address==fake_position:
    queries[0]+=1;uc.mem_write(uc.reg_read(UC_ARM64_REG_X1),struct.pack('<I',max(0,music[0])));uc.reg_write(UC_ARM64_REG_W0,0)
   elif address==tick_fn:uc.reg_write(UC_ARM64_REG_W0,now[0])
   elif address==start_fn:starts[0]+=1

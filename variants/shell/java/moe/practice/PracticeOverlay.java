@@ -1,4 +1,6 @@
 package moe.practice;
+import android.view.MotionEvent;
+import android.view.Window;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -16,6 +18,7 @@ import java.util.Locale;
 public final class PracticeOverlay {
     private static native int boot();
     static native void catalogChanged();
+    static native void setTheme(boolean on);
     private static native void initAssets(String path);
     private static native String chartAsset();
     private static native void pitchMode(boolean changesPitch);
@@ -26,6 +29,7 @@ public final class PracticeOverlay {
     private static native void config(boolean enabled,boolean autoplay,boolean loop,int a,int b,float speed);
     private static native void replay();
     private static native int[] status();
+    private static native boolean inputBlocked();
     static {System.loadLibrary("arcpractice");}
     private final Activity activity;
     private final Handler handler=new Handler();
@@ -47,6 +51,8 @@ public final class PracticeOverlay {
     private Button tab,importTab;
     private int current=-1;
     private boolean opened=false;
+    private boolean blockedTouchStream;
+    private Button panelClose, preparationButton;
     private final int purple=0xff6f568d,ink=0xff30283e;
     public static void attach(Activity a){
         try {prepare(a);int state=boot();if(state!=1){Toast.makeText(a,"练习插件未加载："+state,Toast.LENGTH_LONG).show();return;}new PracticeOverlay(a);}
@@ -61,8 +67,60 @@ public final class PracticeOverlay {
     private void addButton(LinearLayout r,String s,Runnable action){LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(0,dp(36),1);p.setMargins(dp(2),0,dp(2),0);r.addView(button(s,action),p);}
     private EditText timeInput(String value){EditText e=new EditText(activity);e.setSingleLine(true);e.setTextColor(ink);e.setTextSize(15);e.setInputType(8194);e.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI|EditorInfo.IME_ACTION_DONE);e.setOnEditorActionListener((v,action,event)->{hideKeyboard();return true;});e.setText(value);e.setSelectAllOnFocus(true);e.setPadding(dp(8),0,dp(8),0);e.setBackground(background(0xfffaf8fd,0xffcbbddd));return e;}
     private Switch toggle(String label){Switch s=new Switch(activity);s.setText(label);s.setTextColor(ink);s.setTextSize(13);panel.addView(s,new LinearLayout.LayoutParams(-1,dp(37)));s.setOnCheckedChangeListener((v,on)->apply(false));return s;}
+    private boolean containsTouch(View view, MotionEvent event) {
+        if (view == null || !view.isShown()) return false;
+        int[] location = new int[2];
+        view.getLocationOnScreen(location);
+        float x = event.getRawX() - location[0], y = event.getRawY() - location[1];
+        return x >= 0 && y >= 0 && x < view.getWidth() && y < view.getHeight();
+    }
+
+    private boolean handlePreparationTouch(Window.Callback callback, MotionEvent event) {
+        int action = event.getActionMasked();
+        boolean blocked = inputBlocked();
+        if (action == MotionEvent.ACTION_DOWN) {
+            blockedTouchStream = blocked;
+            preparationButton = null;
+            if (blocked) {
+                if (containsTouch(tab, event)) preparationButton = tab;
+                else if (containsTouch(panelClose, event)) preparationButton = panelClose;
+            }
+        } else if (blocked && !blockedTouchStream) {
+            blockedTouchStream = true;
+            MotionEvent cancel = MotionEvent.obtain(event);
+            cancel.setAction(MotionEvent.ACTION_CANCEL);
+            try { callback.dispatchTouchEvent(cancel); } finally { cancel.recycle(); }
+        }
+        if (!blockedTouchStream) return false;
+        if (preparationButton != null) {
+            Button button = preparationButton;
+            int[] location = new int[2];
+            button.getLocationOnScreen(location);
+            MotionEvent local = MotionEvent.obtain(event);
+            local.offsetLocation(event.getRawX() - event.getX() - location[0],
+                                 event.getRawY() - event.getY() - location[1]);
+            try { button.dispatchTouchEvent(local); } finally { local.recycle(); }
+        }
+        if (action == MotionEvent.ACTION_UP || action == MotionEvent.ACTION_CANCEL) {
+            preparationButton = null;
+            blockedTouchStream = false;
+        }
+        return true;
+    }
+
     private PracticeOverlay(Activity a){
         activity=a;
+        final android.view.Window.Callback originalCallback=a.getWindow().getCallback();
+        a.getWindow().setCallback((android.view.Window.Callback)java.lang.reflect.Proxy.newProxyInstance(
+            PracticeOverlay.class.getClassLoader(),new Class<?>[]{android.view.Window.Callback.class},(proxy,method,args)->{
+                String name=method.getName();
+                boolean motion=name.equals("dispatchGenericMotionEvent")||name.equals("dispatchTrackballEvent");
+                boolean key=name.equals("dispatchKeyEvent")||name.equals("dispatchKeyShortcutEvent");
+                if(key){int code=((android.view.KeyEvent)args[0]).getKeyCode();key=code!=android.view.KeyEvent.KEYCODE_VOLUME_UP&&code!=android.view.KeyEvent.KEYCODE_VOLUME_DOWN&&code!=android.view.KeyEvent.KEYCODE_VOLUME_MUTE&&code!=android.view.KeyEvent.KEYCODE_POWER;}
+                if(name.equals("dispatchTouchEvent")&&handlePreparationTouch(originalCallback,(MotionEvent)args[0]))return true;
+                if((motion||key)&&inputBlocked())return true;
+                try{return method.invoke(originalCallback,args);}catch(java.lang.reflect.InvocationTargetException e){throw e.getCause();}
+            }));
         try {font=Typeface.createFromFile(new java.io.File(ChartLibrary.root(a),"Fonts/NotoSansCJKsc-Regular.otf"));}catch(Throwable ignored){try{font=Typeface.createFromFile(new java.io.File(ChartLibrary.root(a),"Fonts/Exo-Regular.ttf"));}catch(Throwable unused){}}
         root=new FrameLayout(a);
         a.addContentView(root,new android.view.ViewGroup.LayoutParams(-1,-1));
@@ -73,7 +131,7 @@ public final class PracticeOverlay {
         FrameLayout.LayoutParams tp=new FrameLayout.LayoutParams(dp(125),dp(35),Gravity.TOP|Gravity.RIGHT);tp.setMargins(0,dp(8),dp(142),0);root.addView(tab,tp);
         ChartLibrary library=ChartLibrary.attach(a);
         importTab=button("＋ 导入谱面",library::show);FrameLayout.LayoutParams ip=new FrameLayout.LayoutParams(dp(125),dp(35),Gravity.TOP|Gravity.RIGHT);ip.setMargins(0,dp(8),dp(12),0);root.addView(importTab,ip);
-        LinearLayout title=row();TextView heading=text("FRAGMENT PRACTICE",18);heading.setTextColor(purple);title.addView(heading,new LinearLayout.LayoutParams(0,-2,1));title.addView(button("×",()->{opened=false;scroll.setVisibility(View.GONE);hideKeyboard();}),new LinearLayout.LayoutParams(dp(32),dp(30)));
+        LinearLayout title=row();TextView heading=text("FRAGMENT PRACTICE",18);heading.setTextColor(purple);title.addView(heading,new LinearLayout.LayoutParams(0,-2,1));panelClose=button("×",()->{opened=false;scroll.setVisibility(View.GONE);hideKeyboard();});title.addView(panelClose,new LinearLayout.LayoutParams(dp(32),dp(30)));
         timer=text("进入曲目后可标记片段",13);panel.addView(timer);
         TextView hint=text("时间以秒为单位 · 起点前预备实际 3 秒",11);hint.setPadding(0,dp(4),0,dp(3));panel.addView(hint);
         LinearLayout times=row();times.addView(text("A  ",15));start=timeInput("0.000");times.addView(start,new LinearLayout.LayoutParams(0,dp(35),1));times.addView(text("  B  ",15));end=timeInput("30.000");times.addView(end,new LinearLayout.LayoutParams(0,dp(35),1));

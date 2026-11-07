@@ -1,3 +1,5 @@
+#include "../../../native/music_origin.h"
+#include "../../../native/effect_clock.h"
 #include <unordered_set>
 #include <time.h>
 static int64_t monotonicNs(){timespec t{};clock_gettime(CLOCK_MONOTONIC,&t);return int64_t(t.tv_sec)*1000000000LL+t.tv_nsec;}
@@ -41,7 +43,9 @@ static void releaseTimeline(){
  groupBaseline.clear();
 }
 static void actionStepHook(void* action,float dt){
- if(!priming&&(previewing||waitingTransport)&&frozenActions.count(action))return;
+ if(!priming&&(previewing||waitingTransport||leadIn.active)&&frozenActions.count(action))return;
+ // Only chart camera/scene actions follow chart time; UI and hit effects do not.
+ if(!priming&&enabled&&frozenActions.count(action))dt*=speed.load();
  actionStepOriginal(action,dt);
 }
 static void* runActionHook(void* node,void* action){
@@ -64,6 +68,18 @@ static void advanceEffects(float seconds){
   reinterpret_cast<void(*)(void*,float)>(vt[0x40/8])(action,seconds);
   if(reinterpret_cast<bool(*)(void*)>(vt[0x28/8])(action))reinterpret_cast<void(*)(void*)>(vt[0x38/8])(action);
  }
+}
+static void (*modelUpdateOriginal)(void*,void*);
+static int preparingEffectsAt=transport::noSeek;
+static void modelUpdateHook(void* model,void* self){
+ int now=timeOf(model),effects=now;
+ if(enabled&&scene==self){
+  if(priming&&preparingEffectsAt!=transport::noSeek)effects=preparingEffectsAt;
+  else if(!previewing&&(waitingTransport||leadIn.active||leadRequested))effects=std::max(now,a.load());
+ }
+ if(effects==now){modelUpdateOriginal(model,self);return;}
+ practiceEffects::EpochScope epoch(at<int>(model,0x54),at<int>(model,0x68),now,effects);
+ modelUpdateOriginal(model,self);
 }
 static bool cacheTimeline(void* model){
  if(sourceModel==model)return !sourceNotes.empty();
@@ -151,11 +167,11 @@ static void timelineTime(void* clock,int time){at<int>(clock,0x20)=time;at<int>(
 static void prepareNote(void* note,int target){
  uintptr_t type=reinterpret_cast<uintptr_t>(at<void*>(note,0))-base;
  if(type==0x18daf40||type==0x1927cc8)return;
- if(at<int>(note,0x1c)<target){at<uint8_t>(note,0xc)=1;return;}
  if(type==0x1918058){
   auto taps=at<void**>(note,0x120),end=at<void**>(note,0x128);
   if(taps&&end>=taps&&end-taps<65536)for(auto p=taps;p<end;++p)if(*p&&at<int>(*p,0x18)<target)at<uint8_t>(*p,0xc)=1;
  }
+ if(at<int>(note,0x1c)<target){at<uint8_t>(note,0xc)=1;return;}
  if(type==0x1918058||type==0x190aba0){
   auto ticks=at<uint8_t*>(note,0x78),end=at<uint8_t*>(note,0x80);
   if(ticks&&end>=ticks&&end-ticks<1200000)for(auto p=ticks;p<end;p+=12)if(at<int>(p,0)<target)at<uint8_t>(p,8)|=1;
@@ -165,12 +181,14 @@ static bool restoreTimeline(void* self,void* model,int target){
  void* clock=at<void*>(model,0x30);if(!clock||!at<uint8_t>(clock,0x2d))return false;
  int64_t began=monotonicNs();if(!cacheTimeline(model))return false;
  clearTransientVisuals(self);
- if(target<restoredAt)rewindTimeline(model);
- clockOriginal(clock);uint8_t saved[0x40];memcpy(saved,clock,sizeof(saved));
+ int effectsTarget=leadRequested?std::max(target,a.load()):target;
+ if(effectsTarget<restoredAt)rewindTimeline(model);
+ transport::initializeMusicOrigin(clock,[](void* c){clockOriginal(c);},[]{pauseMusic(true);});
+ uint8_t saved[0x40];memcpy(saved,clock,sizeof(saved));
  priming=true;at<uint8_t>(clock,0x2c)=0;capturingActions=true;
  int cursor=restoredAt;
  for(void* event:eventNotes){
-  int when=at<int>(event,0x18);if(when>target)break;
+  int when=at<int>(event,0x18);if(when>effectsTarget)break;
   if(at<uint8_t>(event,0xd)||at<uint8_t>(event,0xc))continue;
   timelineTime(clock,when);advanceEffects(std::max(0,when-cursor)/1000.f);cursor=std::max(cursor,when);
   void* handler=at<void*>(self,0x300);
@@ -179,16 +197,21 @@ static bool restoreTimeline(void* self,void* model,int target){
   }
   at<uint8_t>(event,0xd)=1;at<int>(event,0x10)=when;
  }
- timelineTime(clock,target);advanceEffects(std::max(0,target-cursor)/1000.f);capturingActions=false;
+ timelineTime(clock,target);advanceEffects(std::max(0,effectsTarget-cursor)/1000.f);capturingActions=false;
  for(void* note:sourceNotes)prepareNote(note,target);
  // Materialize nearby notes directly at the final time. Never judge/prune the
  // whole historical chart at 60 Hz merely to recover a handful of scene events.
- fn<void(*)(void*,void*)>(0xb94168)(model,self);
+ preparingEffectsAt=effectsTarget;modelUpdateHook(model,self);preparingEffectsAt=transport::noSeek;
+ // The renderer only applies camera width when current != previous. A seek
+ // materializes the model before its next render, which consumes that delta.
+ // Commit the native camera transform now, including seeks back to 4K.
+ if(void* track=at<void*>(self,0x3b0))if(void* camera=at<void*>(track,0x2f8))fn<void(*)(void*,float)>(0xdaf890)(camera,at<float>(model,0x60));
  if(void* visual=at<void*>(self,0x3c0))fn<void(*)(void*,int,void*)>(0x127cd8c)(visual,target,model);
  priming=false;memcpy(clock,saved,sizeof(saved));clockOriginal(clock);
  at<int>(clock,0x28)=at<int>(clock,0x20)-target;
- lastClock=nullptr;fraction=0;timelineCursor=target;restoredAt=target;
+ lastClock=nullptr;fraction=0;timelineCursor=target;restoredAt=effectsTarget;
  pendingSeek=transport::noSeek;musicSyncing=false;
+ __android_log_print(4,"ArcPractice","effects prepared through=%d chart=%d",effectsTarget,target);
  __android_log_print(4,"ArcPractice","seek ready target=%d actual=%d prepare_ms=%lld",target,timeOf(model),(long long)((monotonicNs()-began)/1000000));
  return true;
 }

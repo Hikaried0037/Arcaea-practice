@@ -18,6 +18,11 @@ PROFILES = {
     'shell': ('classes3.dex', 'a2633fe805b55627f0143ca7f7f08555cc80b6cff13b4e0ddfa294bbe64df6ed'),
     'full': ('classes4.dex', '143e1c8bd6683a93ac02f895f500b3ff2a1143a528f1dab56788fa655d3cbb23'),
 }
+PROVIDER_HASHES = {
+    'shell': 'a14162852b531d8859300449f0fcf8743a11e48418aa8a9e18e58677ccbaeeb3',
+    'full': '66863d1b30e993a1a51dd911fd3e929e0ed27d02e878f4529f1b88706968f3f1',
+}
+
 
 def run(*args):
     subprocess.run([str(x) for x in args], check=True)
@@ -35,6 +40,7 @@ def main():
     parser.add_argument('--android-jar', type=Path)
     parser.add_argument('--build-tools', type=Path)
     parser.add_argument('--base-apk', type=Path)
+    parser.add_argument('--theme-baseline', type=Path, help='Original songlist JSON used only to recover old forced theme fields')
     parser.add_argument('--output', type=Path, default=ROOT/'out')
     parser.add_argument('--compile-only', action='store_true')
     parser.add_argument('--unsigned', action='store_true')
@@ -61,6 +67,8 @@ def main():
             parser.error('--base-apk must be a supported shell r3 or full r10 APK (or its r2/r9 predecessor)')
         with zipfile.ZipFile(args.base_apk) as archive:
             actual = hashlib.sha256(archive.read('lib/arm64-v8a/libcocos2dcpp.so')).hexdigest()
+            if args.variant in PROVIDER_HASHES and hashlib.sha256(archive.read('lib/arm64-v8a/libfmodProvider.so')).hexdigest() != PROVIDER_HASHES[args.variant]:
+                parser.error('Unsupported FMOD provider profile; refusing SFX scheduling patch')
             if actual != expected or dex not in archive.namelist():
                 parser.error('Unsupported APK native profile or plugin DEX layout; refusing to patch')
         if not args.unsigned and (not args.keystore or not args.keystore.is_file() or not os.environ.get(args.password_env)):
@@ -88,6 +96,18 @@ def main():
         print('Plugin native library and DEX compiled successfully: '+args.variant)
         return
     replacements = {dex:dexdir/'classes.dex', 'lib/arm64-v8a/libarcpractice.so':build/'libarcpractice.so'}
+    if args.theme_baseline:
+        original = json.loads(args.theme_baseline.read_text(encoding='utf-8-sig'))
+        def theme_fields(obj):
+            return {k:obj[k] for k in ('bg','bg_inverse','bgOverride','track') if k in obj}
+        songs=[]
+        for song in original['songs']:
+            item=dict(id=song['id'],**theme_fields(song))
+            item['difficulties']=[dict(ratingClass=d.get('ratingClass',i),**theme_fields(d)) for i,d in enumerate(song.get('difficulties',[]))]
+            songs.append(item)
+        baseline=build/'theme-baseline.json'
+        baseline.write_text(json.dumps(dict(songs=songs),ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+        replacements['assets/practice-theme-baseline.json']=baseline
     unsigned = build/'unsigned.apk'
     # Preserve compressed game payloads, including very large assets, byte for byte.
     zipfile.ZIP64_LIMIT = 0xffffffff

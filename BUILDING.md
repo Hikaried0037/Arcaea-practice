@@ -51,3 +51,5 @@ python inject_arc701.py --base-apk ./inputs/Arcaea.apk --apktool ./tools/apktool
 ```
 
 签名密码仍通过 ARCPRACTICE_SIGNING_PASS 环境变量传递。输出包名 moe.low.Arc701.practice，继续使用原 Arc701 外置目录。初始注入保留原始 resources.arsc 的资源 ID，仅调整包名；不使用 Apktool 重建后的资源表替换游戏资源。
+
+2026-11-05 构建新增 `--theme-baseline <original-songlist.json>`：壳子 r10 使用未被主题投影修改的原始数据包 songlist，一体 r17 使用原 APK 的 assets/songs/songlist。该输入由用户本地提供，不包含在源码中；构建器只提取背景/轨道恢复所需的字段到 APK。省略时仍可构建，但旧版已污染目录的恢复仅能依赖设备撤销记录或原 APK songlist。

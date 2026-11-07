@@ -9,7 +9,7 @@
 // substituted at playSound, and position/seek units are mapped to source time.
 namespace audioCache {
 struct Source {void* system;std::string path;unsigned mode;};
-struct Playback {void* source;void* actual;float requested,rate;bool changesPitch;};
+struct Playback {void* source;void* actual;float requested,rate;bool changesPitch;bool gameplay;};
 struct Converted {void* sound;float rate;std::string path;};
 static std::mutex mutex;
 static std::unordered_map<void*,Source> sources;
@@ -19,10 +19,25 @@ static std::unordered_map<void*,float> soundRates;
 static int (*getCurrentSound)(void*,void**),(*getFormat)(void*,int*,int*,int*,int*),(*getDefaults)(void*,float*,int*),(*readData)(void*,void*,unsigned,unsigned*);
 static int (*seekData)(void*,unsigned);
 static bool available;
+// Provider SFX deadlines use output time, while the game uses source time.
+static thread_local double providerClockScale=0;
+static float playbackRate(void* channel){std::lock_guard<std::mutex> lock(mutex);auto it=playing.find(channel);return it==playing.end()?1.f:it->second.requested;}
 static std::atomic<int> failure{0};
 static float channelRate(void* channel){std::lock_guard<std::mutex> lock(mutex);auto it=playing.find(channel);return it==playing.end()?1.f:it->second.rate;}
+static bool musicChannel(void* channel){
+ void* expected=nullptr;
+ {std::lock_guard<std::mutex> lock(mutex);auto it=playing.find(channel);if(it==playing.end()||!it->second.gameplay)return false;expected=it->second.actual;}
+ void* current=nullptr;return getCurrentSound(channel,&current)==0&&current==expected;
+}
 static bool reload(void* channel,float rate,bool changesPitch){std::lock_guard<std::mutex> lock(mutex);auto it=playing.find(channel);return it!=playing.end()&&(std::abs(it->second.requested-rate)>.0001f||(rate!=1.f&&it->second.changesPitch!=changesPitch));}
-static bool songPath(const std::string& path){return path.find("/songs/")!=std::string::npos||path.rfind("songs/",0)==0||path.rfind("assets/songs/",0)==0;}
+static bool songPath(const std::string& path){
+ if(path.find("/songs/")==std::string::npos&&path.rfind("songs/",0)!=0)return false;
+ size_t slash=path.find_last_of('/'),dot=path.find_last_of('.');
+ if(dot==std::string::npos||dot<=slash)return false;
+ std::string stem=path.substr(slash+1,dot-slash-1);
+ // Song-local kick/voice/etc WAVs are triggered effects, not music clocks.
+ return stem=="base"||(stem.size()==1&&stem[0]>='0'&&stem[0]<='4');
+}
 static std::string cacheKey(const Source& source,float rate,bool changesPitch){
  struct stat info{};std::string fingerprint=source.path+"|hq-v4|"+std::to_string(int(std::lround(rate*100)))+"|"+(changesPitch?"rate":"tempo");
  if(stat(source.path.c_str(),&info)==0)fingerprint+="|"+std::to_string(info.st_size)+"|"+std::to_string(info.st_mtime)+"|"+std::to_string(info.st_mtim.tv_nsec);
@@ -128,12 +143,12 @@ static int qualityPlay(void* system,void* original,void* group,bool paused,void*
   }catch(const std::exception& e){audioError=-20;audioCache::failure=-20;__android_log_print(6,"ArcPractice","quality audio fallback: %s",e.what());}
  }
  int result=qualityPlayOriginal(system,actual,group,paused,channel);
- if(!result&&channel&&*channel){std::lock_guard<std::mutex> lock(audioCache::mutex);audioCache::playing.erase(*channel);if(known)audioCache::playing[*channel]={original,actual,eligible?rate:1.f,convertedRate,changesPitch};}
+ if(!result&&channel&&*channel){std::lock_guard<std::mutex> lock(audioCache::mutex);audioCache::playing.erase(*channel);if(known)audioCache::playing[*channel]={original,actual,eligible?rate:1.f,convertedRate,changesPitch,eligible};}
  if(!result&&actual!=original)audioCache::retire(original,actual);
  return result;
 }
-static int qualityPosition(void* channel,uint32_t* position,uint32_t unit){int result=qualityPositionOriginal(channel,position,unit);if(!result&&position&&(unit==1||unit==2))*position=quality::sourceTime(*position,audioCache::channelRate(channel));return result;}
-static int qualitySeek(void* channel,uint32_t position,uint32_t unit){if(unit==1||unit==2)position=quality::outputTime(position,audioCache::channelRate(channel));return qualitySeekOriginal(channel,position,unit);}
+static int qualityPosition(void* channel,uint32_t* position,uint32_t unit){int result=qualityPositionOriginal(channel,position,unit);if(!result&&position&&(unit==1||unit==2))*position=quality::sourceTime(*position,audioCache::providerClockScale>0?float(audioCache::providerClockScale):audioCache::channelRate(channel));return result;}
+static int qualitySeek(void* channel,uint32_t position,uint32_t unit){if(unit==1||unit==2)position=quality::outputTime(position,audioCache::providerClockScale>0?float(audioCache::providerClockScale):audioCache::channelRate(channel));return qualitySeekOriginal(channel,position,unit);}
 static int qualityLength(void* sound,uint32_t* length,uint32_t unit){
  int result=qualityLengthOriginal(sound,length,unit);if(!result&&length&&(unit==1||unit==2)){std::lock_guard<std::mutex> lock(audioCache::mutex);auto it=audioCache::soundRates.find(sound);if(it!=audioCache::soundRates.end())*length=quality::sourceTime(*length,it->second);}return result;
 }

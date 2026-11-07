@@ -78,3 +78,16 @@ python tests/decoded_cache_test.py --cache fixture-tempo.wav --rate 0.5 --source
 实际混音测量方法、旧版对比及限制见 AUDIO_ORIGIN_FIX.md。缓存测试只核验解码完整性，不代替音乐与判定混音对齐测量。
 
 可用 `python tests/audio_origin_fixture.py fixture-output` 生成测试源、对应 AFF 与右声道参考点击声。该脚本只生成原创合成信号。
+
+
+## 负谱面偏移和准备阶段（2026-11-04）
+
+`music_origin_test.cpp` 编译为 ARM64 共享测试库；`music_origin_test.py --helper ... --shell-game ... --full-game ... --report ...` 在 Unicorn 中执行生产 initializeMusicOrigin 和两个原生时钟，涵盖 -1333 谱面偏移、校准、倍率及暂停，检查首次启动、音乐原点与不重复启动。
+
+`compiled_prepare_test.py` 参数与 compiled_clock_test.py 相同。它执行最终生产 Hold 渲染和声音钩子，以故意重新显示所有 hold 的替代原生渲染器检查后置隐藏，并检查准备/选段/等待等阶段不会调用原始声音入口，包括大于 2 的特殊音效编号。它不验证 GPU，也不代替原生自定义音效波形的实际输出测量。
+
+compiled_sync_test.py 的模拟当前音乐声道通过 musicChannel 依赖桩识别；它模拟音乐位置，不验证 FMOD 容器内部管理。因此真实声道选择仍需运行验证。
+
+## 6K 求值与背景目录恢复（2026-11-05）
+
+compiled_effect_clock_test.py 参数同 compiled_clock_test.py，执行最终生产钩子和两版原生泛用 6K 求值片段，各 1050 组，另外检查正常事件提交不被覆盖。GPU 摄像机变换仍需运行对比。ThemeRegression.java 使用 Android org.json，在 Android app_process 中执行合成数据合并/恢复测试；不能用 android.jar 的桌面空实现执行。实际升级和开关操作另在隔离模拟器曲库验证。

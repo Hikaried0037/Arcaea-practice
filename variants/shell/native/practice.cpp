@@ -132,11 +132,21 @@ static int (*soundOriginal)(void*,int,int,int,int);
 static int soundDiagnostics,audioDiagnosticFrames;
 static void (*burstOriginal)(void*,void*,int,void*);
 static void (*sustainBurstOriginal)(void*,void*,void*);
-static bool suppressBurst(){return priming||simulatorActive||waitingTransport||pendingSeek!=transport::noSeek;}
-static void burstHook(void* renderer,void* note,int result,void* point){if(!suppressBurst())burstOriginal(renderer,note,result,point);}
-static void sustainBurstHook(void* renderer,void* note,void* point){if(!suppressBurst())sustainBurstOriginal(renderer,note,point);}
+static bool suppressJudgement(){
+ return priming||simulatorActive||previewing||transitioning||waitingTransport||leadIn.active||pendingSeek!=transport::noSeek;
+}
+static void (*automaticJudgementOriginal)(void*);
+static bool (*tapJudgementOriginal)(void*,void*,int);
+static void automaticJudgementHook(void* model){
+ if(!suppressJudgement())automaticJudgementOriginal(model);
+}
+static bool tapJudgementHook(void* model,void* note,int finger){
+ return !suppressJudgement()&&tapJudgementOriginal(model,note,finger);
+}
+static void burstHook(void* renderer,void* note,int result,void* point){if(!suppressJudgement())burstOriginal(renderer,note,result,point);}
+static void sustainBurstHook(void* renderer,void* note,void* point){if(!suppressJudgement())sustainBurstOriginal(renderer,note,point);}
 static int soundHook(void* manager,int effect,int when,int mode,int flags){
- if(effect<=2&&(priming||simulatorActive||waitingTransport||pendingSeek!=transport::noSeek))return -1;
+ if(scene&&(priming||simulatorActive||previewing||waitingTransport||leadIn.active||pendingSeek!=transport::noSeek))return -1;
  int result=soundOriginal(manager,effect,when,mode,flags);
  if(effect<=2&&enabled&&autoplay&&soundDiagnostics++<20)
   __android_log_print(4,"ArcPractice","note sound effect=%d at=%d voice=%d",effect,when,result);
@@ -168,12 +178,17 @@ static void* audioProvider(){
  void* manager=at<void*>(core,0x10);
  return manager?at<void*>(manager,0x2c0):nullptr;
 }
+static bool hookAt(uint8_t*,void*,void**);
+#include "../../../native/scheduled_fx.h"
 static bool musicPosition(uint32_t& result){
  void* provider=audioProvider();if(!provider||!getMusicPosition)return false;
  auto begin=at<uintptr_t*>(provider,0x38),end=at<uintptr_t*>(provider,0x40);
  if(!begin||end<begin||end-begin<2||end-begin>128||!begin[1])return false;
- bool ok=getMusicPosition(reinterpret_cast<void*>(begin[1]),&result,1)==0;
- if(ok)result=quality::sourceTime(result,audioCache::channelRate(reinterpret_cast<void*>(begin[1])));return ok;
+ for(auto p=begin;p<end;p+=2)if(p[1]&&audioCache::musicChannel(reinterpret_cast<void*>(p[1]))){
+  void* channel=reinterpret_cast<void*>(p[1]);bool ok=getMusicPosition(channel,&result,1)==0;
+  if(ok){result=quality::sourceTime(result,audioCache::channelRate(channel));return true;}
+ }
+ return false;
 }
 static void musicPitch(float ratio,bool diagnostic=false){
  int64_t now=monotonicNs();bool mode=changePitch.load()!=0;
@@ -186,6 +201,7 @@ static void musicPitch(float ratio,bool diagnostic=false){
  if(!begin||end<begin||end-begin>128)return;
  for(auto p=begin;p<end;p+=2)if(p[1]){
   void* channel=reinterpret_cast<void*>(p[1]);
+  if(!audioCache::musicChannel(channel))continue;
   // The provider retains old preview voices. Do not create effects or report
   // failures for voices which FMOD has already stopped/reused.
   void* currentSound=nullptr;
@@ -273,12 +289,13 @@ static void notesHook(void* model){
  notesOriginal(model);
  if(enabled&&scene&&at<void*>(scene,0x3e0)==model){
   int now=timeOf(model);
-  if(!simulatorActive&&(autoplay||now<a.load()))autoNotes(model,now);
+  if(!suppressJudgement()&&autoplay)autoNotes(model,now);
  }
 }
+static void pauseMusic(bool);
 #include "timeline.h"
 static void judgementHook(void* model,void* self){
- if(priming||simulatorActive){if(simulatorActive&&!priming)previewEvents(self,model,timeOf(model));return;}
+ if(suppressJudgement()){if(simulatorActive&&!priming)previewEvents(self,model,timeOf(model));return;}
  judgementOriginal(model,self);
 }
 static bool initHook(void* self){
@@ -316,9 +333,11 @@ static void retry(void* self,bool countRound=true){
 }
 static void pauseMusic(bool paused){
  void* provider=audioProvider();if(!provider||!pauseChannel)return;
+ // The shared BGM group also carries pre-scheduled chart sound effects.
+ if(void* group=at<void*>(provider,0x18)){pauseChannel(group,paused);return;}
  auto first=at<uintptr_t*>(provider,0x38),last=at<uintptr_t*>(provider,0x40);
  if(!first||last<first||last-first>128)return;
- for(auto p=first;p<last;p+=2)if(p[1])pauseChannel(reinterpret_cast<void*>(p[1]),paused);
+ for(auto p=first;p<last;p+=2)if(p[1]&&audioCache::musicChannel(reinterpret_cast<void*>(p[1])))pauseChannel(reinterpret_cast<void*>(p[1]),paused);
 }
 static bool consumeVisual(int now){return scene&&enabled&&(priming||simulatorActive||previewing||autoplay||now<a.load());}
 static void visible(void* node,bool on){auto vt=at<uintptr_t*>(node,0);reinterpret_cast<void(*)(void*,bool)>(vt[0x150/8])(node,on);}
@@ -366,6 +385,8 @@ static void holdVisualHook(void* node,int now){
  at<int>(note,0x30)=0;
  if(now>=at<int>(note,0x1c))at<int>(note,0x34)=0;
  holdVisualOriginal(node,now);
+ // Native forward-only visibility can re-enable a completed cached Hold.
+ if((priming||simulatorActive||previewing)&&(now>=at<int>(note,0x1c)||at<uint8_t>(note,0xc)))visible(node,false);
  at<int>(note,0x30)=head;at<int>(note,0x34)=tail;
 }
 static void arcVisualHook(void* node,int now){
@@ -396,10 +417,15 @@ static void arcVisualHook(void* node,int now){
 static bool seekMusic(void* model,int target){
  void* provider=audioProvider();void* clock=at<void*>(model,0x30);if(!provider||!setMusicPosition)return false;
  auto first=at<uintptr_t*>(provider,0x38),last=at<uintptr_t*>(provider,0x40);
- if(!first||last-first<2||last-first>128||!first[1])return false;
+ if(!first||last-first<2||last-first>128)return false;
+ void* channel=nullptr;
+ for(auto p=first;p<last;p+=2)if(p[1]&&audioCache::musicChannel(reinterpret_cast<void*>(p[1]))){channel=reinterpret_cast<void*>(p[1]);break;}
+ if(!channel)return false;
  int audio=std::max(0,target-at<int>(clock,0x38));
- audio=quality::outputTime(audio,audioCache::channelRate(reinterpret_cast<void*>(first[1])));
- int result=setMusicPosition(reinterpret_cast<void*>(first[1]),audio,1);audioError=result;
+ int result=0;
+ if(scheduledFx::installed){scheduledFx::seek(provider,audio,0);}
+ else{audio=quality::outputTime(audio,audioCache::channelRate(channel));result=setMusicPosition(channel,audio,1);}
+ audioError=result;
  __android_log_print(4,"ArcPractice","audio seek chart=%d audio=%d result=%d",target,audio,result);
  return result==0;
 }
@@ -440,7 +466,7 @@ extern "C" JNIEXPORT void JNICALL Java_moe_practice_PracticeOverlay_frame(JNIEnv
   audioStable=settled?audioStable+1:0;
   if(warmFrames==0&&(audioStable>=3||monotonicNs()-prepareSince>3000000000LL)){
    if(leadRequested){leadIn.begin(timelineCursor,a.load(),monotonicNs());countdownRemaining=3000;}
-   audioStartPending=beforeMusic;pauseMusic(beforeMusic);waitingTransport=false;previewWasActive=false;leadRequested=false;
+   audioStartPending=beforeMusic;pauseMusic(beforeMusic||at<uint8_t>(clock,0x2c)!=0);waitingTransport=false;previewWasActive=false;leadRequested=false;
    lastClock=nullptr;fraction=0;syncTarget=timelineCursor;smoothAudioSync.reset();musicSyncing=!leadIn.active;
    __android_log_print(4,"ArcPractice","transport ready target=%d lead_ms=%d",timelineCursor,countdownRemaining.load());
   }
@@ -448,7 +474,7 @@ extern "C" JNIEXPORT void JNICALL Java_moe_practice_PracticeOverlay_frame(JNIEnv
  position=timeOf(model);
  if(audioStartPending&&!previewing&&!waitingTransport){
   void* clock=at<void*>(model,0x30);
-  if(position>=at<int>(clock,0x38)){seekMusic(model,position.load());pauseMusic(false);audioStartPending=false;}
+  if(!at<uint8_t>(clock,0x2c)&&position>=at<int>(clock,0x38)){seekMusic(model,position.load());pauseMusic(false);audioStartPending=false;}
  }
  at<uint8_t>(self,0x34d)=enabled?1:originalNoFail;
  if(enabled)scenePracticed=true;
@@ -479,7 +505,7 @@ static void clockHook(void* clock){
   int target=leadIn.sample(monotonicNs(),at<uint8_t>(clock,0x2c)!=0);
   at<int>(clock,0x28)=raw-target;countdownRemaining=leadIn.remaining();
   lastClock=clock;lastRaw=raw;fraction=0;
-  if(!leadIn.active){syncTarget=a.load();smoothAudioSync.reset();musicSyncing=true;__android_log_print(4,"ArcPractice","lead complete chart=%d elapsed_ms=%lld",target,(long long)(leadIn.elapsedNs/1000000));}
+  if(!leadIn.active){for(void* note:sourceNotes)prepareNote(note,a.load());syncTarget=a.load();smoothAudioSync.reset();musicSyncing=true;__android_log_print(4,"ArcPractice","lead complete chart=%d elapsed_ms=%lld",target,(long long)(leadIn.elapsedNs/1000000));}
   return;
  }
  if(at<uint8_t>(clock,0x2c))wasPaused=true;
@@ -504,8 +530,7 @@ static void clockHook(void* clock){
  }
 }
 // Only use on verified, position-independent 16-byte prologues.
-static bool hook(uintptr_t offset,void* replacement,void** original){
- auto target=reinterpret_cast<uint8_t*>(base+offset);
+static bool hookAt(uint8_t* target,void* replacement,void** original){
  void* trampoline=mmap(nullptr,4096,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANONYMOUS,-1,0);
  if(trampoline==MAP_FAILED)return false;
  uint32_t jump[2]={0x58000051,0xd61f0220}; // ldr x17, #8; br x17
@@ -519,6 +544,7 @@ static bool hook(uintptr_t offset,void* replacement,void** original){
  __builtin___clear_cache(reinterpret_cast<char*>(target),reinterpret_cast<char*>(target+16));
  mprotect(reinterpret_cast<void*>(pageStart),page,PROT_READ|PROT_EXEC);return true;
 }
+static bool hook(uintptr_t offset,void* replacement,void** original){return hookAt(reinterpret_cast<uint8_t*>(base+offset),replacement,original);}
 static int locate(dl_phdr_info* info,size_t,void*){if(strstr(info->dlpi_name,"libcocos2dcpp.so")){base=info->dlpi_addr;return 1;}return 0;}
 extern "C" JNIEXPORT jint JNICALL Java_moe_practice_PracticeOverlay_boot(JNIEnv*,jclass){
  if(ready)return ready;dl_iterate_phdr(locate,nullptr);if(!base)return -1;
@@ -563,6 +589,7 @@ extern "C" JNIEXPORT jint JNICALL Java_moe_practice_PracticeOverlay_boot(JNIEnv*
  setBypass=reinterpret_cast<decltype(setBypass)>(dlsym(fmod,"_ZN4FMOD3DSP9setBypassEb"));
  if(!getSystem||!createDSP||!addDSP||!removeDSP||!releaseDSP||!setFloat||!setInt||!setBypass)return -5;
  if(!audioCache::init(fmod))return -6;
+ if(!scheduledFx::install())return -7;
  loadPackCovers();
  bool ok=hook(0xf7dd44,reinterpret_cast<void*>(packCoverHook),reinterpret_cast<void**>(&packCoverOriginal));
  ok&=hook(0x146c798,reinterpret_cast<void*>(packSongsHook),reinterpret_cast<void**>(&packSongsOriginal));
@@ -572,6 +599,8 @@ extern "C" JNIEXPORT jint JNICALL Java_moe_practice_PracticeOverlay_boot(JNIEnv*
  ok&=hook(0x109c0d4,reinterpret_cast<void*>(clockHook),reinterpret_cast<void**>(&clockOriginal));
  ok&=hook(0x13c44a8,reinterpret_cast<void*>(notesHook),reinterpret_cast<void**>(&notesOriginal));
  ok&=hook(0xaadf4c,reinterpret_cast<void*>(judgementHook),reinterpret_cast<void**>(&judgementOriginal));
+ ok&=hook(0x180c678,reinterpret_cast<void*>(automaticJudgementHook),reinterpret_cast<void**>(&automaticJudgementOriginal));
+ ok&=hook(0x7808fc,reinterpret_cast<void*>(tapJudgementHook),reinterpret_cast<void**>(&tapJudgementOriginal));
  ok&=hook(0x15884f4,reinterpret_cast<void*>(soundHook),reinterpret_cast<void**>(&soundOriginal));
  ok&=hook(0xf111c8,reinterpret_cast<void*>(chartHook),reinterpret_cast<void**>(&chartOriginal));
  ok&=hook(0x8f0a04,reinterpret_cast<void*>(burstHook),reinterpret_cast<void**>(&burstOriginal));
@@ -600,6 +629,7 @@ extern "C" JNIEXPORT jint JNICALL Java_moe_practice_PracticeOverlay_boot(JNIEnv*
    if(mprotect(reinterpret_cast<void*>(start),page,PROT_READ|PROT_WRITE)==0){*slot=reinterpret_cast<uintptr_t>(actionStepHook);mprotect(reinterpret_cast<void*>(start),page,PROT_READ);}else ok=false;
   }
  }
+ ok&=hook(0xb94168,reinterpret_cast<void*>(modelUpdateHook),reinterpret_cast<void**>(&modelUpdateOriginal));
  ready=ok?1:-3;__android_log_print(4,"ArcPractice","hooks ready=%d pitch=%p",ready.load(),pitch);return ready;
 }
 extern "C" JNIEXPORT void JNICALL Java_moe_practice_PracticeOverlay_config(JNIEnv*,jclass,jboolean on,jboolean autoPlay,jboolean looping,jint start,jint end,jfloat ratio){
@@ -617,4 +647,8 @@ extern "C" JNIEXPORT void JNICALL Java_moe_practice_PracticeOverlay_pitchMode(JN
 extern "C" JNIEXPORT void JNICALL Java_moe_practice_PracticeOverlay_flowMode(JNIEnv*,jclass,jboolean on){fixedFlow=on;}
 extern "C" JNIEXPORT jintArray JNICALL Java_moe_practice_PracticeOverlay_status(JNIEnv* env,jclass){
  jint values[]={ready.load(),position.load(),duration.load(),rounds.load(),audioCache::failure.load()?audioCache::failure.load():audioError.load(),previewing.load(),transitioning||waitingTransport||pendingSeek!=transport::noSeek,countdownRemaining.load()};auto out=env->NewIntArray(8);env->SetIntArrayRegion(out,0,8,values);return out;
+}
+
+extern "C" JNIEXPORT jboolean JNICALL Java_moe_practice_PracticeOverlay_inputBlocked(JNIEnv*,jclass){
+ return !previewing&&(priming||transitioning||waitingTransport||leadIn.active||pendingSeek!=transport::noSeek||countdownRemaining.load()>0);
 }

@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-04",
+  "primary_runtime": "6.13.10c shell; Android 35 x86_64 with ARM64 translation",
+  "native_sha256": {
+    "shell": "517494b65ead7da8ed68b51958778ae9ac20999792255df45bd47affc29471ac",
+    "full": "9602604248541a01e5b924c4d32f84e4dd85eff8270ce4c943b393bfd1ceefac"
+  },
+  "final_native_bytes_match_tested": true,
+  "spiders_thread_future": {
+    "aff_offset_ms": -1333,
+    "first_music_origin_ms": 1333,
+    "sample_chart_ms": 2948,
+    "sample_music_ms": 1634,
+    "sample_difference_ms": 19,
+    "physical_audio_measured": false
+  },
+  "preview": {
+    "forward_backward_drags": 8,
+    "end_holds_cleared": true,
+    "rewind_notes_restored": true,
+    "score_unchanged": true
+  },
+  "preparation_input": {
+    "touch_pause_panel_back_blocked": true,
+    "expanded_keyboard_gate": "final Java compilation; native state tests; no additional runtime keyboard test"
+  },
+  "arcana_eden": {
+    "fixture": "original BYD AFF, music and kick.wav in isolated accessible song slot; shipped data unchanged",
+    "rate": 0.5,
+    "segment_start_ms": 138482,
+    "seek_source_ms": 136982,
+    "sfx_dsp_remaining_ticks": 72000,
+    "dsp_sample_rate_hz": 24000,
+    "sfx_dsp_remaining_ms": 3000,
+    "physical_waveform_measured": false
+  },
+  "camera_6k": {
+    "segment_start_ms": 160000,
+    "state_restored_during_preparation": true,
+    "continued_during_playback": true
+  },
+  "full_variant": {
+    "boot_hooks_ready": true,
+    "installed_native_matches_tested": true,
+    "gameplay_runtime": "not separately repeated; shared logic and final compiled native regression tested"
+  },
+  "limits": [
+    "No physical phone or physical 144 Hz frame-time measurement",
+    "No physical audio waveform measurement",
+    "Private diagnostics and fixture songs excluded from source and delivery APKs"
+  ],
+  "scope_guard": {
+    "changed_existing_production_files": [
+      "native/audio_cache.h",
+      "variants/full/java/moe/practice/PracticeOverlay.java",
+      "variants/full/native/practice.cpp",
+      "variants/full/native/timeline.h",
+      "variants/shell/java/moe/practice/PracticeOverlay.java",
+      "variants/shell/native/practice.cpp",
+      "variants/shell/native/timeline.h"
+    ],
+    "other_previous_production_files_unchanged": true
+  }
+}

@@ -7,7 +7,8 @@
 #include <unordered_map>
 #include <vector>
 static std::string assetRoot,chartPath;
-static bool globalTheme;
+static std::atomic<bool> globalTheme{false};
+extern "C" JNIEXPORT void JNICALL Java_moe_practice_PracticeOverlay_setTheme(JNIEnv*,jclass,jboolean on){globalTheme=on;}
 struct LocalAsset{std::vector<char> bytes;off64_t pos=0;std::string path;};
 static std::mutex assetMutex;
 static std::unordered_map<AAsset*,LocalAsset*> localAssets;

@@ -1,0 +1,11 @@
+{
+  "result": "passed",
+  "legacy_forced_catalog_recovered": true,
+  "manual_added_song_preserved": true,
+  "manual_artist_preserved": true,
+  "runtime_matches_editable_catalog": true,
+  "repair_backup_preserved": true,
+  "actual_ui_apply_restore": true,
+  "theme_mode_on_off_correct": true,
+  "songlist_metadata_unchanged_on_and_off": true
+}

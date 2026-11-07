@@ -1,0 +1,16 @@
+{
+  "providers": {
+    "shell": {
+      "sha256": "a14162852b531d8859300449f0fcf8743a11e48418aa8a9e18e58677ccbaeeb3"
+    },
+    "full": {
+      "sha256": "66863d1b30e993a1a51dd911fd3e929e0ed27d02e878f4529f1b88706968f3f1"
+    }
+  },
+  "schedule_prologue_hex": "ff8303d1fd7b08a9fc6f09a9fa670aa9",
+  "seek_prologue_hex": "ffc302d1e83300fdfd7b07a9f85f08a9",
+  "event_stride_bytes": 32,
+  "time_offset_bytes": 24,
+  "voice_record_stride_bytes": 40,
+  "voice_channel_offset_bytes": 32
+}

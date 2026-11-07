@@ -1,6 +1,6 @@
 # Arcaea Practice
 
-Arcaea 非官方练习插件源码。当前版本：**外置数据壳子版 6.13.10c-r8**、**Arc701 外置数据壳子版 7.0.1c-r1**、**一体版 7.0.1f-r15**。
+Arcaea 非官方练习插件源码。当前版本：**外置数据壳子版 6.13.10c-r11**、**Arc701 外置数据壳子版 7.0.1c-r1**、**一体版 7.0.1f-r18**。
 
 本仓库发布插件 Java/C++ 源码、构建工具、测试和脱敏验证记录。安装 APK 与游戏数据包需要自行准备。
 
@@ -21,9 +21,9 @@ Arcaea 非官方练习插件源码。当前版本：**外置数据壳子版 6.13
 
 | 目录 | 目标 | 曲库位置 |
 | --- | --- | --- |
-| `variants/shell` | 6.13.10c，外置数据壳子 r8 | `/storage/emulated/0/Arc61310/` |
+| `variants/shell` | 6.13.10c，外置数据壳子 r11 | `/storage/emulated/0/Arc61310/` |
 | `variants/arc701` | 7.0.1c，Arc701 壳子 r1 | `/storage/emulated/0/Arc701/` |
-| `variants/full` | 7.0.1f，一体版 r15 | 应用内部 `files/practice-assets/` |
+| `variants/full` | 7.0.1f，一体版 r18 | 应用内部 `files/practice-assets/` |
 
 三个版本的原生地址不同，必须使用对应源码和对应 APK。原生库校验不通过时，构建脚本会停止。
 
@@ -48,7 +48,7 @@ Arcaea 非官方练习插件源码。当前版本：**外置数据壳子版 6.13
 
 保留 r4 / r11 的 offset 倍速同步修复。
 
-最新版本：6.13.10c 壳子 r8 / Arc701 壳子 r1 / 一体 r15。高质量倍速缓存与同步说明见 AUDIO_QUALITY.md；第三方音频库署名与许可见 THIRD_PARTY_NOTICES.md。
+最新版本：6.13.10c 壳子 r11 / Arc701 壳子 r1 / 一体 r18。高质量倍速缓存与同步说明见 AUDIO_QUALITY.md；第三方音频库署名与许可见 THIRD_PARTY_NOTICES.md。
 
 本次流畅度优化与验证边界见 [FRAME_PACING.md](FRAME_PACING.md)。
 
@@ -57,3 +57,7 @@ Arcaea 非官方练习插件源码。当前版本：**外置数据壳子版 6.13
 本次修复倍速缓存丢失原音频开头，并扩大加速时启动缓冲的有效同步范围。旧缓存自动失效，首次播放重新生成。见 [音频起点修复与实测](AUDIO_ORIGIN_FIX.md)。
 
 [Arc701 壳子适配、构建与验证](ARC701.md)。该壳子有独立的原生地址配置，不能使用另两版的 SO。
+
+2026-11-04 准备阶段与选段修复仅重建 shell/full：见 [实现与验证边界](SEGMENT_PREPARATION.md)。Arc701 与 iOS 安装包保持原交付。
+
+2026-11-05：6K 中段摄像机和背景恢复修复详见 [说明与验证](THEME_CAMERA_FIX.md)。本次输出壳子 r11、一体 r18，其他版本保持原发布。

@@ -24,9 +24,12 @@ public final class ChartLibrary extends Fragment {
     private int pageWidth,pageHeight;private HeaderScroll pageHeader;
     public static File root(Context c){return new File(c.getFilesDir(),"practice-assets");}
     public static synchronized void prepare(Context c)throws Exception {
-        File r=root(c);r.mkdirs();recover(r);
-        for(String n:new String[]{"songlist","packlist"}){File f=new File(r,"catalog-"+n+".json");if(!f.exists())write(f,read(c.getAssets().open("songs/"+n)));writeJson(f,json(f));}
-        regenerate(c);
+        File r=root(c);r.mkdirs();recover(r);repairTheme(c,r);
+        for(String n:new String[]{"songlist","packlist"}){File f=new File(r,"catalog-"+n+".json"),current=new File(r,"songs/"+n),last=new File(r,".practice-last-"+n);
+            if(!f.exists())write(f,read(c.getAssets().open("songs/"+n)));
+            if(n.equals("songlist")&&current.exists()&&last.exists()&&!Arrays.equals(read(new FileInputStream(current)),read(new FileInputStream(last))))writeJson(f,ThemeCatalog.merge(json(current),json(f),json(last)));
+            writeJson(f,json(f));}
+        regenerate(c);write(new File(r,"theme-mode"),new byte[]{(byte)(c.getSharedPreferences("practice",0).getBoolean("theme",false)?1:0)});
     }
     static byte[] read(InputStream input)throws IOException {try(InputStream in=input;ByteArrayOutputStream out=new ByteArrayOutputStream()){byte[] b=new byte[32768];int n;while((n=in.read(b))!=-1)out.write(b,0,n);return out.toByteArray();}}
     static void write(File f,byte[] bytes)throws IOException {
@@ -45,11 +48,20 @@ public final class ChartLibrary extends Fragment {
         File r=root(c);JSONObject s=json(new File(r,"catalog-songlist.json")),p=json(new File(r,"catalog-packlist.json"));
         LibraryCatalog model=new LibraryCatalog(s,p);
         if(PackCovers.ensure(c,r,p))writeJson(new File(r,"catalog-packlist.json"),p);
-        if(c.getSharedPreferences("practice",0).getBoolean("theme",false)){JSONArray a=s.getJSONArray("songs");for(int i=0;i<a.length();i++){JSONObject song=a.getJSONObject(i);theme(song);JSONArray d=song.optJSONArray("difficulties");if(d!=null)for(int j=0;j<d.length();j++)theme(d.getJSONObject(j));}}
+        // Theme only redirects assets; never write forced values into song metadata.
         writeJson(new File(r,"songs/songlist"),s);writeJson(new File(r,"songs/packlist"),model.runtimePacks());
         for(String n:new String[]{"songlist","packlist"})write(new File(r,".practice-last-"+n),read(new FileInputStream(new File(r,"songs/"+n))));
     }
-    private static void theme(JSONObject s)throws Exception{s.put("bg","finale_conflict");s.put("bg_inverse","finale_conflict");s.put("bgOverride","finale_conflict");s.put("track","dark_vs");}
+    private static void repairTheme(Context c,File r)throws Exception {
+        File catalog=new File(r,"catalog-songlist.json"),done=new File(r,".practice-theme-repair-v2");if(!catalog.exists()||done.exists())return;
+        JSONObject original=json(catalog),fixed=ThemeCatalog.copy(original);int repaired=0;
+        File undo=new File(r,".practice-catalog-undo.json");if(undo.exists())repaired+=ThemeCatalog.recover(fixed,json(undo).optJSONObject("songs"));
+        JSONObject baseline=null;try{baseline=new JSONObject(new String(read(c.getAssets().open("practice-theme-baseline.json")),"UTF-8"));}catch(FileNotFoundException ignored){}
+        if(baseline==null)try{baseline=new JSONObject(new String(read(c.getAssets().open("songs/songlist")),"UTF-8"));}catch(FileNotFoundException ignored){}
+        repaired+=ThemeCatalog.recover(fixed,baseline);
+        if(repaired>0){File saved=new File(r,".practice-theme-before-repair.json");if(!saved.exists())writeJson(saved,original);writeJson(catalog,fixed);}
+        write(done,new byte[]{1});android.util.Log.i("ArcPractice","theme metadata repaired="+repaired);
+    }
     private interface Change {void run(LibraryCatalog model)throws Exception;}
     private synchronized void mutate(Change change)throws Exception {
         load();JSONObject before=new JSONObject().put("songs",new JSONObject(songs.toString())).put("packs",new JSONObject(packs.toString()));
@@ -92,7 +104,7 @@ public final class ChartLibrary extends Fragment {
             if(n==0)pick(501,"application/zip");if(n==1){pendingZip=null;openedPack=null;openPage();}if(n==2)undo();if(n>=3)theme(n==3);
         }).show());
     }
-    private void theme(boolean on){try{getActivity().getSharedPreferences("practice",0).edit().putBoolean("theme",on).commit();regenerate(getActivity());write(new File(root,"theme-mode"),new byte[]{(byte)(on?1:0)});PracticeOverlay.catalogChanged();message((on?"全曲背景和轨道替换已保存。":"已恢复原背景和轨道。")+"\n返回主界面再进入选曲即可刷新曲库；已缓存的背景贴图需重启游戏更新。");}catch(Exception e){error(e);}}
+    private void theme(boolean on){try{prepare(getActivity());getActivity().getSharedPreferences("practice",0).edit().putBoolean("theme",on).commit();regenerate(getActivity());write(new File(root,"theme-mode"),new byte[]{(byte)(on?1:0)});PracticeOverlay.setTheme(on);PracticeOverlay.catalogChanged();message((on?"全曲背景和轨道替换已保存。":"已恢复原背景和轨道。")+"\n返回主界面再进入选曲即可刷新曲库；已缓存的背景贴图需重启游戏更新。");}catch(Exception e){error(e);}}
     private void pick(int code,String type){Intent i=new Intent(Intent.ACTION_OPEN_DOCUMENT);i.addCategory(Intent.CATEGORY_OPENABLE);i.setType(type);if(code==501)i.putExtra(Intent.EXTRA_MIME_TYPES,new String[]{"application/zip","application/x-zip-compressed","application/octet-stream"});startActivityForResult(i,code);}
     private void choosePack(boolean cover){if(cover){pendingZip=null;}openedPack=null;openPage();}
     private long stamp(){long x=0;for(String n:new String[]{"catalog-songlist.json","catalog-packlist.json","songs/songlist","songs/packlist","songs/pack","songs/pack/1080"}){File f=new File(root,n);x=x*31+f.lastModified();x=x*31+f.length();}return x;}

@@ -1,0 +1,23 @@
+{
+  "result": "passed",
+  "method": "Real compiled ARM64 production sound/hold hooks; fake original renderer deliberately makes every Hold visible",
+  "variants": {
+    "shell": {
+      "scheduled_fx_rate_cases": 176,
+      "nested_arctap_prepare_cases": 2,
+      "input_gate_cases": 14,
+      "sound_gate_cases": 35,
+      "hold_visibility_cases": 24,
+      "native_renderer_forced_to_reenable_old_hold": true
+    },
+    "full": {
+      "scheduled_fx_rate_cases": 176,
+      "nested_arctap_prepare_cases": 2,
+      "input_gate_cases": 14,
+      "sound_gate_cases": 35,
+      "hold_visibility_cases": 24,
+      "native_renderer_forced_to_reenable_old_hold": true
+    }
+  },
+  "limitations": "Renderer dependency stubbed; native window/input and GPU behavior require runtime checks"
+}

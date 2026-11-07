@@ -1,0 +1,21 @@
+{
+  "result": "passed",
+  "method": "Actual original ARM64 game clocks plus compiled production initializeMusicOrigin helper in Unicorn",
+  "variants": {
+    "shell": {
+      "cases": 240,
+      "negative_aff_included": -1333,
+      "origin_matches_negative_combined_offset": true,
+      "starts_once": true,
+      "pause_preserved": true
+    },
+    "full": {
+      "cases": 240,
+      "negative_aff_included": -1333,
+      "origin_matches_negative_combined_offset": true,
+      "starts_once": true,
+      "pause_preserved": true
+    }
+  },
+  "limitations": "No physical audio output measurement"
+}

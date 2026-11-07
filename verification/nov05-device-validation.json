@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-05",
+  "primary_runtime": "Android 35 x86_64 emulator with ARM64 translation; 6.13.10c shell",
+  "native_sha256": {
+    "shell": "9878f30e528571adcfb71f67776f08237c6f93e7b1ab3fa05efdb30acd6b70dd",
+    "full": "4ecd5699997b987760c70b750efcee55e3c3b33516da37affc9629c8dce9855b"
+  },
+  "camera": {
+    "fixture": "Original Arcana Eden BYD AFF in isolated accessible slot; shipped data unchanged",
+    "rate": 0.5,
+    "direct_starts_ms": [
+      120000,
+      165000
+    ],
+    "normal_entry_start_ms": 100000,
+    "normal_entry_rate": 1.5,
+    "rewind_4k_ms": 61427,
+    "native_camera_transform_committed": true,
+    "preparation_and_playback_checked": true,
+    "full_named_song_effects_not_tested": true
+  },
+  "theme": {
+    "result": "passed",
+    "legacy_forced_catalog_recovered": true,
+    "manual_added_song_preserved": true,
+    "manual_artist_preserved": true,
+    "runtime_matches_editable_catalog": true,
+    "repair_backup_preserved": true,
+    "actual_ui_apply_restore": true,
+    "theme_mode_on_off_correct": true,
+    "songlist_metadata_unchanged_on_and_off": true
+  },
+  "full_variant": {
+    "final_apk_installed": true,
+    "boot_hooks_ready": true,
+    "installed_native_matches_tested": true,
+    "gameplay_not_separately_repeated": true
+  },
+  "scope_guard": {
+    "changed_existing_production_files": [
+      "variants/full/java/moe/practice/ChartLibrary.java",
+      "variants/full/java/moe/practice/PracticeOverlay.java",
+      "variants/full/native/assets.h",
+      "variants/full/native/practice.cpp",
+      "variants/full/native/timeline.h",
+      "variants/shell/java/moe/practice/ChartLibrary.java",
+      "variants/shell/java/moe/practice/PracticeOverlay.java",
+      "variants/shell/native/assets.h",
+      "variants/shell/native/practice.cpp",
+      "variants/shell/native/timeline.h"
+    ],
+    "other_previous_production_files_unchanged": true
+  },
+  "limits": [
+    "No physical device, physical audio or GPU 144Hz measurement",
+    "Cached textures require application restart after theme toggle",
+    "Unknown custom songs with no original metadata backup cannot have lost fields reconstructed"
+  ]
+}

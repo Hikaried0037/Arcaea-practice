@@ -1,0 +1,10 @@
+{
+  "result": "passed",
+  "method": "Final ARM64 clockHook with original game clock and active native settings memory; stale calibration state, all 176 speeds, two routes, repeat switches and settings edits",
+  "cases": {
+    "full": 7400,
+    "shell": 7400
+  },
+  "settings_immutable": true,
+  "limitations": "No physical audio output latency measurement"
+}
